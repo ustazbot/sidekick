@@ -54,7 +54,11 @@ export default function LoginPage() {
       setMessage('Sila masukkan alamat email anda.')
       return
     }
-    mode === 'magic-link' ? await handleMagicLink() : await handlePassword()
+    if (mode === 'magic-link') {
+      await handleMagicLink()
+    } else {
+      await handlePassword()
+    }
   }
 
   function switchMode(next: Mode) {

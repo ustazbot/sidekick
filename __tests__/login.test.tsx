@@ -82,7 +82,10 @@ describe('LoginPage', () => {
     await user.type(screen.getByLabelText('Kata Laluan'), 'secret123')
     await user.click(screen.getByRole('button', { name: /^Log Masuk$/i }))
 
-    await waitFor(() => expect(mockPush).toHaveBeenCalledWith('/dashboard'))
+    await waitFor(() => {
+    expect(mockPush).toHaveBeenCalledWith('/dashboard')
+    expect(mockRefresh).toHaveBeenCalledTimes(1)
+  })
   })
 
   it('shows BM error on wrong password', async () => {

@@ -18,8 +18,9 @@ export function createClient() {
               cookieStore.set(name, value, options)
             )
           } catch {
-            // Dipanggil dari Server Component — cookie tidak boleh diset.
-            // Middleware handle session refresh.
+            // Server Components cannot set cookies (read-only store) — error caught here.
+            // Route Handlers CAN set cookies and won't throw, so catch never fires there.
+            // Middleware handles session token refresh via lib/supabase/middleware.ts.
           }
         },
       },

@@ -43,9 +43,11 @@ describe('middleware', () => {
 
     it('passes /login through without redirect', async () => {
       const req = makeRequest('/login')
-      mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
+      const clientResult = mockClient(req, null)
+      mockCreateClient.mockResolvedValue(clientResult as any)
       const res = await middleware(req)
       expect(res.headers.get('location')).toBeNull()
+      expect(res).toBe(clientResult.supabaseResponse)
     })
   })
 
@@ -62,9 +64,11 @@ describe('middleware', () => {
 
     it('passes /dashboard through without redirect', async () => {
       const req = makeRequest('/dashboard')
-      mockCreateClient.mockResolvedValue(mockClient(req, mockUser) as any)
+      const clientResult = mockClient(req, mockUser)
+      mockCreateClient.mockResolvedValue(clientResult as any)
       const res = await middleware(req)
       expect(res.headers.get('location')).toBeNull()
+      expect(res).toBe(clientResult.supabaseResponse)
     })
   })
 })

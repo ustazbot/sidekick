@@ -14,7 +14,7 @@ export default function AffiliateClient({ affiliate, refUrl }: Props) {
   const [registeredRef, setRegisteredRef] = useState<string | null>(null)
   const [copied, setCopied] = useState(false)
 
-  const displayAffiliate = affiliate ?? (registeredRef ? { ref_code: registeredRef, is_active: false } : null)
+  const displayAffiliate = affiliate ?? (registeredRef ? { ref_code: registeredRef, is_active: false, created_at: new Date().toISOString() } : null)
   const displayUrl = refUrl ?? (registeredRef ? `https://sidekick.my/ref/${registeredRef}` : null)
 
   async function handleRegister() {

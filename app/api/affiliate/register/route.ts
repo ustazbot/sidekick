@@ -33,6 +33,9 @@ export async function POST() {
     .insert({ user_id: user.id, ref_code })
 
   if (error) {
+    if (error.code === '23505') {
+      return NextResponse.json({ error: 'ref_code_conflict' }, { status: 409 })
+    }
     return NextResponse.json({ error: 'registration_failed' }, { status: 500 })
   }
 

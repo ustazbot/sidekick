@@ -33,6 +33,7 @@ export default function HelpDesk() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message }),
       })
+      if (!res.ok) throw new Error('helpdesk failed')
       const data = await res.json()
       setReply(data.reply ?? 'Tiada jawapan.')
     } catch {

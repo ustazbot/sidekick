@@ -26,15 +26,19 @@ type Props = {
 export default function PromptModal({ file, isOpen, onClose }: Props) {
   const [platform, setPlatform] = useState<Platform>('chatgpt')
   const [sending, setSending] = useState(false)
+  const [sendError, setSendError] = useState(false)
 
   if (!isOpen) return null
 
   async function handleSendToAI() {
     setSending(true)
+    setSendError(false)
     try {
       const res = await fetch(`/${file.filepath}`)
       const text = await res.text()
       window.open(AI_URLS[platform] + encodeURIComponent(text), '_blank')
+    } catch {
+      setSendError(true)
     } finally {
       setSending(false)
     }
@@ -139,6 +143,11 @@ export default function PromptModal({ file, isOpen, onClose }: Props) {
           >
             {sending ? 'Membuka...' : `✈️ Buka dalam ${PLATFORMS.find((p) => p.id === platform)?.label}`}
           </button>
+          {sendError && (
+            <p className="text-[11px] text-center" style={{ color: 'var(--danger)' }}>
+              Gagal membuka. Cuba lagi.
+            </p>
+          )}
         </div>
       </div>
     </div>

@@ -40,7 +40,7 @@ ${fileList}`
   const content: string = data.choices?.[0]?.message?.content ?? '[]'
 
   try {
-    const match = content.match(/\[.*\]/s)
+    const match = content.match(/\[[\s\S]*\]/)
     if (!match) return []
     return JSON.parse(match[0]) as string[]
   } catch {

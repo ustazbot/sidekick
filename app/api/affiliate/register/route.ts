@@ -6,7 +6,7 @@ function generateRefCode(email: string): string {
   return prefix.replace(/[^a-z0-9]/gi, '').toLowerCase().slice(0, 10)
 }
 
-export async function POST() {
+export async function POST(_request: Request) {
   const supabase = createClient()
   const {
     data: { user },

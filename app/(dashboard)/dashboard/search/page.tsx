@@ -24,6 +24,7 @@ export default function SearchPage() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query }),
       })
+      if (!res.ok) throw new Error('search failed')
       const data = await res.json()
       setResults(data.files ?? [])
       setStatus('done')

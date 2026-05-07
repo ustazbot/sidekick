@@ -1,6 +1,7 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import BottomNav from '@/components/ui/BottomNav'
+import HelpDesk from '@/components/ui/HelpDesk'
 
 export default async function DashboardLayout({
   children,
@@ -72,6 +73,7 @@ export default async function DashboardLayout({
       <main className="relative z-10">{children}</main>
 
       <BottomNav />
+      <HelpDesk />
     </div>
   )
 }

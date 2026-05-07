@@ -18,6 +18,10 @@ export async function middleware(request: NextRequest) {
     return supabaseResponse
   }
 
+  if (pathname.startsWith('/onboarding') && !user) {
+    return NextResponse.redirect(new URL('/', request.url))
+  }
+
   if (pathname.startsWith('/dashboard') && !user) {
     return NextResponse.redirect(new URL('/', request.url))
   }

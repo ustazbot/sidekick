@@ -127,4 +127,24 @@ describe('middleware', () => {
       expect(res).toBe(clientResult.supabaseResponse)
     })
   })
+
+  describe('onboarding routes', () => {
+    it('redirects unauthenticated user from /onboarding to /', async () => {
+      const req = makeRequest('/onboarding')
+      mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
+      const res = await middleware(req)
+      expect(res.status).toBe(307)
+      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+    })
+
+    it('allows authenticated user through to /onboarding', async () => {
+      const req = makeRequest('/onboarding')
+      const user = { id: 'user-123', email: 'user@test.com', app_metadata: {} }
+      const clientResult = mockClient(req, user)
+      mockCreateClient.mockResolvedValue(clientResult as any)
+      const res = await middleware(req)
+      expect(res.headers.get('location')).toBeNull()
+      expect(res).toBe(clientResult.supabaseResponse)
+    })
+  })
 })

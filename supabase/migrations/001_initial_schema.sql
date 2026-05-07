@@ -146,6 +146,15 @@ create policy "conversions_via_affiliate" on public.affiliate_conversions
     )
   );
 
+-- Affiliate clicks: affiliates can log their own clicks (insert only; reads via service_role)
+create policy "affiliate_clicks_insert" on public.affiliate_clicks
+  for insert with check (
+    exists (
+      select 1 from public.affiliates
+      where id = affiliate_id and user_id = auth.uid()
+    )
+  );
+
 -- Prompt logs: own records only
 create policy "prompt_logs_own_data" on public.prompt_logs
   for all using (auth.uid() = user_id);

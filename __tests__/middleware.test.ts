@@ -71,4 +71,60 @@ describe('middleware', () => {
       expect(res).toBe(clientResult.supabaseResponse)
     })
   })
+
+  describe('admin routes', () => {
+    it('redirects unauthenticated user from /admin to /', async () => {
+      const req = makeRequest('/admin')
+      mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
+      const res = await middleware(req)
+      expect(res.status).toBe(307)
+      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+    })
+
+    it('redirects unauthenticated user from /admin/users to /', async () => {
+      const req = makeRequest('/admin/users')
+      mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
+      const res = await middleware(req)
+      expect(res.status).toBe(307)
+      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+    })
+
+    it('redirects non-admin user from /admin to /dashboard', async () => {
+      const req = makeRequest('/admin')
+      const regularUser = { id: 'user-123', email: 'user@test.com', app_metadata: {} }
+      mockCreateClient.mockResolvedValue(mockClient(req, regularUser) as any)
+      const res = await middleware(req)
+      expect(res.status).toBe(307)
+      expect(res.headers.get('location')).toBe('http://localhost:3000/dashboard')
+    })
+
+    it('redirects user with null app_metadata from /admin to /dashboard', async () => {
+      const req = makeRequest('/admin')
+      const userWithNullMeta = { id: 'user-123', email: 'user@test.com', app_metadata: null }
+      mockCreateClient.mockResolvedValue(mockClient(req, userWithNullMeta) as any)
+      const res = await middleware(req)
+      expect(res.status).toBe(307)
+      expect(res.headers.get('location')).toBe('http://localhost:3000/dashboard')
+    })
+
+    it('allows admin user through to /admin', async () => {
+      const req = makeRequest('/admin')
+      const adminUser = { id: 'admin-123', email: 'admin@test.com', app_metadata: { role: 'admin' } }
+      const clientResult = mockClient(req, adminUser)
+      mockCreateClient.mockResolvedValue(clientResult as any)
+      const res = await middleware(req)
+      expect(res.headers.get('location')).toBeNull()
+      expect(res).toBe(clientResult.supabaseResponse)
+    })
+
+    it('allows admin user through to /admin/users', async () => {
+      const req = makeRequest('/admin/users')
+      const adminUser = { id: 'admin-123', email: 'admin@test.com', app_metadata: { role: 'admin' } }
+      const clientResult = mockClient(req, adminUser)
+      mockCreateClient.mockResolvedValue(clientResult as any)
+      const res = await middleware(req)
+      expect(res.headers.get('location')).toBeNull()
+      expect(res).toBe(clientResult.supabaseResponse)
+    })
+  })
 })

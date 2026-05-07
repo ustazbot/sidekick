@@ -7,6 +7,17 @@ export async function middleware(request: NextRequest) {
 
   const { pathname } = request.nextUrl
 
+  if (pathname.startsWith('/admin')) {
+    if (!user) {
+      return NextResponse.redirect(new URL('/', request.url))
+    }
+    const role = (user.app_metadata as Record<string, unknown>)?.role
+    if (typeof role !== 'string' || role !== 'admin') {
+      return NextResponse.redirect(new URL('/dashboard', request.url))
+    }
+    return supabaseResponse
+  }
+
   if (pathname.startsWith('/dashboard') && !user) {
     return NextResponse.redirect(new URL('/', request.url))
   }

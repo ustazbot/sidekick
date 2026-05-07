@@ -17,5 +17,21 @@ export async function GET(request: Request) {
     return NextResponse.redirect(`${siteUrl}/login?error=auth_error`)
   }
 
+  const { data: { user } } = await supabase.auth.getUser()
+
+  if (!user) {
+    return NextResponse.redirect(`${siteUrl}/login?error=auth_error`)
+  }
+
+  const { data: profile } = await supabase
+    .from('users')
+    .select('onboarded')
+    .eq('id', user.id)
+    .single()
+
+  if (!profile?.onboarded) {
+    return NextResponse.redirect(`${siteUrl}/onboarding`)
+  }
+
   return NextResponse.redirect(`${siteUrl}/dashboard`)
 }

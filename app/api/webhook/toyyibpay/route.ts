@@ -21,9 +21,13 @@ export async function POST(request: Request) {
   const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
   const adminSupabase = createAdminClient()
 
-  const { data: inviteData } = await adminSupabase.auth.admin.inviteUserByEmail(email, {
+  const { data: inviteData, error: inviteError } = await adminSupabase.auth.admin.inviteUserByEmail(email, {
     redirectTo: `${siteUrl}/auth/callback`,
   })
+
+  if (inviteError) {
+    console.error('[webhook] invite failed:', inviteError.message)
+  }
 
   const userId = inviteData?.user?.id ?? null
 

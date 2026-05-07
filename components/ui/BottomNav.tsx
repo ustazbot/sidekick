@@ -15,6 +15,7 @@ export default function BottomNav() {
 
   return (
     <nav
+      aria-label="Navigasi utama"
       className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] flex justify-around px-2 pt-2 pb-6 z-50"
       style={{
         background: 'rgba(255,255,255,0.90)',
@@ -37,14 +38,15 @@ export default function BottomNav() {
             className="flex flex-col items-center gap-1 px-5 py-1 rounded-md"
           >
             <span
+              aria-hidden="true"
               className="text-lg leading-none"
               style={{ color: active ? 'var(--accent)' : 'var(--text-3)' }}
             >
               {tab.icon}
             </span>
             <span
-              className="text-[10px] font-medium"
-              style={{ color: active ? 'var(--accent)' : 'var(--text-3)', fontWeight: active ? 600 : 500 }}
+              className={`text-[10px] ${active ? 'font-semibold' : 'font-medium'}`}
+              style={{ color: active ? 'var(--accent)' : 'var(--text-3)' }}
             >
               {tab.label}
             </span>

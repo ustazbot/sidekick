@@ -9,7 +9,11 @@ const localStorageMock = (() => {
     clear: () => { store = {} },
   }
 })()
-Object.defineProperty(window, 'localStorage', { value: localStorageMock })
+Object.defineProperty(window, 'localStorage', {
+  value: localStorageMock,
+  writable: true,
+  configurable: true,
+})
 
 describe('FlowBanner', () => {
   beforeEach(() => localStorageMock.clear())
@@ -25,6 +29,12 @@ describe('FlowBanner', () => {
     render(<FlowBanner />)
     const dismissBtn = screen.getByRole('button', { name: /tutup/i })
     fireEvent.click(dismissBtn)
+    expect(screen.queryByText('Pilih Modul')).not.toBeInTheDocument()
+  })
+
+  it('does not render banner when already dismissed in localStorage', () => {
+    localStorageMock.setItem('sidekick_banner_dismissed', '1')
+    render(<FlowBanner />)
     expect(screen.queryByText('Pilih Modul')).not.toBeInTheDocument()
   })
 })

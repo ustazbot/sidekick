@@ -11,20 +11,18 @@ const STEPS = [
 const STORAGE_KEY = 'sidekick_banner_dismissed'
 
 export default function FlowBanner() {
-  const [visible, setVisible] = useState(false)
+  const [dismissed, setDismissed] = useState<boolean | null>(null)
 
   useEffect(() => {
-    if (!localStorage.getItem(STORAGE_KEY)) {
-      setVisible(true)
-    }
+    setDismissed(!!localStorage.getItem(STORAGE_KEY))
   }, [])
 
   function dismiss() {
     localStorage.setItem(STORAGE_KEY, '1')
-    setVisible(false)
+    setDismissed(true)
   }
 
-  if (!visible) return null
+  if (dismissed === null || dismissed) return null
 
   return (
     <div

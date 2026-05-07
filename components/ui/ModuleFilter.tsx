@@ -34,7 +34,8 @@ export default function ModuleFilter({ activeModule, onSelect }: Props) {
             <button
               key={mod.id}
               onClick={() => onSelect(mod.id)}
-              className="flex-shrink-0 rounded-[14px] overflow-hidden"
+              aria-pressed={active}
+              className="flex-shrink-0 rounded-[14px] overflow-hidden focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1"
               style={{
                 background: active ? 'var(--accent)' : 'var(--glass)',
                 border: active ? '1px solid var(--accent)' : '1px solid var(--glass-border2)',

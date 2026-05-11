@@ -132,11 +132,14 @@ export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://s
                       </p>
                     </div>
                     <p className="text-[11px]" style={{ color: 'var(--text-3)' }}>
-                      {new Date(p.paid_at).toLocaleDateString('ms-MY', {
-                        day: 'numeric',
-                        month: 'short',
-                        year: 'numeric',
-                      })}
+                      {(() => {
+                        const d = new Date(p.paid_at)
+                        return isNaN(d.getTime()) ? '—' : d.toLocaleDateString('ms-MY', {
+                          day: 'numeric',
+                          month: 'short',
+                          year: 'numeric',
+                        })
+                      })()}
                     </p>
                   </div>
                 ))}

@@ -147,4 +147,21 @@ describe('POST /api/admin/affiliate/payout', () => {
     const res = await POST(req)
     expect(res.status).toBe(200)
   })
+
+  it('returns 500 when affiliate update fails', async () => {
+    mockCreateClient.mockReturnValue(makeAuthSupabase('planetrizq@gmail.com') as any)
+    const db = makeAdminDb({
+      affiliate: { id: 'aff-1', pending_commission: 76, total_withdrawn: 0, total_commission: 76 },
+      updateError: true,
+    })
+    mockCreateAdminClient.mockReturnValue(db as any)
+    const req = new Request('http://localhost/api/admin/affiliate/payout', {
+      method: 'POST',
+      body: JSON.stringify({ affiliate_id: 'aff-1' }),
+    })
+    const res = await POST(req)
+    expect(res.status).toBe(500)
+    const body = await res.json()
+    expect(body.error).toBe('update_failed')
+  })
 })

@@ -124,7 +124,7 @@ export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://s
                   >
                     <div>
                       <p className="font-syne font-bold text-sm" style={{ color: 'var(--accent)' }}>
-                        RM{p.amount.toFixed(2)}
+                        RM{Number(p.amount).toFixed(2)}
                       </p>
                       <p className="text-[10px]" style={{ color: 'var(--text-3)' }}>
                         {p.method.charAt(0).toUpperCase() + p.method.slice(1)}

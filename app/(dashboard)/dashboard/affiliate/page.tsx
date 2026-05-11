@@ -35,7 +35,10 @@ export default async function AffiliatePage() {
       .eq('affiliate_id', raw.id)
       .order('paid_at', { ascending: false })
       .limit(20)
-    payouts = (payoutsData as PayoutRecord[]) ?? []
+    payouts = ((payoutsData ?? []) as any[]).map(r => ({
+      ...r,
+      amount: Number(r.amount),
+    }))
   }
 
   const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://sidekick.my'

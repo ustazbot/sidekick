@@ -82,4 +82,15 @@ describe('AffiliateClient — sejarah bayaran', () => {
     )
     expect(screen.queryByText('Sejarah Bayaran Komisyen')).not.toBeInTheDocument()
   })
+
+  it('menunjukkan "—" untuk tarikh yang tidak sah', () => {
+    render(
+      <AffiliateClient
+        affiliate={mockAffiliate}
+        refUrl="https://sidekick.my/ref/testref123"
+        payouts={[{ id: 'pay-bad', amount: 50, method: 'manual', note: null, paid_at: 'not-a-date' }]}
+      />
+    )
+    expect(screen.getAllByText('—').length).toBeGreaterThan(0)
+  })
 })

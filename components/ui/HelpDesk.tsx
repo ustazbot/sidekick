@@ -141,7 +141,7 @@ export default function HelpDesk() {
                     Hubungi kami melalui WhatsApp untuk bantuan lanjut.
                   </p>
                   <a
-                    href={`https://wa.me/60123456789`}
+                    href={`https://wa.me/60192323043`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 w-full rounded-xl py-3 text-sm font-semibold"

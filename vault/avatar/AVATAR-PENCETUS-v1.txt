@@ -1,0 +1,73 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Pencetus Pembelian — Apa Yang Akhirnya Buat Dia Beli
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, buying trigger, pencetus beli, tipping point, social proof, keputusan beli
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Bantu saya fahami PENCETUS PEMBELIAN — apa yang akhirnya mendorong pelanggan ini untuk klik beli,
+selepas semua keraguan dan halangan psikologi yang mereka ada.
+
+Help me understand the BUYING TRIGGER — what finally pushes this customer to click buy,
+after all their doubts and psychological friction.
+
+================================================================
+BAHAGIAN 1 — BUYING TRIGGERS
+================================================================
+
+Target: [TARGET PELANGGAN / TARGET CUSTOMER] yang membeli [NAMA PRODUK / PRODUCT NAME]
+
+Analisa semua Buying Triggers berikut:
+
+1. EMOTIONAL TIPPING POINT
+   — Detik atau situasi yang buat mereka rasa "dah tak boleh tahan, kena beli sekarang"
+   — Bukan sebab logik — sebab rasa
+
+2. EXTERNAL EVENTS
+   — Peristiwa luar yang mencetuskan keputusan beli (hari gaji, event khas, musim, milestone)
+   — Situasi hidup yang membuat keperluan jadi mendesak
+
+3. SOCIAL PROOF YANG MEREKA RESPOND
+   — Jenis testimoni, review, atau bukti sosial yang paling meyakinkan untuk target ini
+   — Dari siapa (kawan rapat, influencer, stranger, pakar) dan dalam format apa
+
+4. OFFER / PACKAGE YANG BUAT MEREKA RASA "WORTH IT"
+   — Apa yang perlu ada dalam tawaran supaya mereka rasa "okay, berbaloi ni"
+   — Nilai yang mereka cari berbanding harga yang mereka bayar
+
+5. JAMINAN YANG HILANGKAN RISIKO
+   — Apa jaminan atau polisi yang membuat mereka rasa selamat untuk cuba
+   — Apa yang mengurangkan "takut rugi" dalam fikiran mereka
+
+================================================================
+BAHAGIAN 2 — FORMAT OUTPUT WAJIB
+================================================================
+
+Untuk SETIAP Buying Trigger, jawab dalam format ini:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+| [situasi konkrit yang mencetuskan trigger] | [emosi di saat keputusan] | [ayat dalam kepala atau ke kawan] | [cara seller gunakan trigger ini dalam content/closing] |
+
+Buat sekurang-kurangnya 3 rows per trigger.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+- Buying Triggers mesti spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — bukan tips jualan generik
+- Fokus pada psikologi keputusan — bukan taktik manipulasi
+- Konteks Malaysia: gaji 1-15hb, cuti sekolah, Raya, hujung bulan, budaya "kena tanya dulu"
+
+--- TAMAT PROMPT / END PROMPT ---

@@ -1,0 +1,79 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Universal / Semua Niche
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, masalah, pain points, cabaran, frustrasi, pelanggan
+KEMASKINI  : 11/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller mengenal pasti masalah sebenar yang dihadapi pelanggan — masalah yang produk mereka selesaikan.
+Guna output ini untuk tulis content yang terus menyentuh "luka" pembeli.
+
+This prompt helps sellers identify the real problems their customers face — problems their product solves.
+Use this output to write content that directly touches the buyer's pain.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Tolong bantu saya kenal pasti masalah sebenar, cabaran harian, dan frustrasi yang dihadapi pembeli ideal saya.
+
+I am a seller selling [NAMA PRODUK / PRODUCT NAME].
+Please help me identify the real problems, daily challenges, and frustrations my ideal buyer faces.
+
+ANALISA DAN JAWAB SEMUA BAHAGIAN BERIKUT / ANALYSE AND ANSWER ALL SECTIONS:
+
+1. MASALAH UTAMA / PRIMARY PROBLEMS
+   - Apakah 3 masalah terbesar yang mendorong mereka untuk mencari produk seperti ini?
+   - Masalah mana yang paling menyakitkan dan paling mendesak?
+   - What are the top 3 problems driving them to seek this type of product?
+
+2. CABARAN HARIAN / DAILY CHALLENGES
+   - Apa yang menyusahkan mereka setiap hari berkaitan dengan masalah ini?
+   - Apa yang mereka terpaksa hadapi berulang kali?
+   - What daily inconveniences do they face related to this problem?
+
+3. FRUSTRASI DENGAN PENYELESAIAN LAMA / FRUSTRATIONS WITH OLD SOLUTIONS
+   - Apa yang sudah mereka cuba sebelum ini untuk selesaikan masalah ini?
+   - Kenapa penyelesaian lama tidak berjaya atau tidak memuaskan?
+   - What have they already tried? Why did previous solutions fail or disappoint?
+
+4. KESAN MASALAH / IMPACT OF THE PROBLEM
+   - Bagaimana masalah ini menjejaskan kehidupan harian mereka?
+   - Apa kos emosi, masa, dan wang yang mereka tanggung kerana masalah ini?
+   - How does this problem impact their daily life, emotions, time, and finances?
+
+5. MASA & TRIGGER / TIMING & TRIGGER
+   - Bila biasanya mereka sedar mereka ada masalah ini (situasi atau detik tertentu)?
+   - Apa event atau keadaan yang mendorong mereka untuk cari penyelesaian sekarang?
+   - When do they usually realise they have this problem? What triggers the search for a solution?
+
+FORMAT OUTPUT / OUTPUT FORMAT:
+Senaraikan dalam bentuk bullet points yang jelas dengan contoh situasi sebenar jika boleh.
+Bahasa yang ringkas dan emosional — macam orang sebenar bercerita tentang masalah mereka.
+List in clear bullet points with real-situation examples where possible. Use concise, emotional language.
+
+PERATURAN / RULES:
+- Fokus pada masalah SEBENAR yang pelanggan rasa, bukan masalah yang seller fikir mereka ada
+  Focus on problems customers actually feel, not what sellers think they have
+- Jangan terlalu teknikal — guna bahasa orang biasa
+  Don't be too technical — use everyday language
+- Konteks Malaysia — guna contoh dan situasi tempatan
+  Malaysian context — use local examples and situations
+
+--- TAMAT PROMPT / END PROMPT ---

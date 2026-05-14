@@ -1,0 +1,67 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CONVERT
+NICHE      : Pecahkan Objection — Reframe Bantahan Pelanggan
+PLATFORM   : WhatsApp, DM, Live Chat
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : objection handling, bantahan, reframe, convert, closing, whatsapp reply
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Objection yang kerap diterima: [BANTAHAN / OBJECTION]
+
+Bantu saya PECAHKAN setiap objection di atas dengan cara yang:
+- Tidak terasa seperti tekanan atau manipulasi
+- Mengakui perasaan pelanggan terlebih dahulu
+- Reframe nilai bukan pertahankan harga/produk
+- Tulis dalam format boleh guna terus sebagai reply WA atau DM
+
+Help me BREAK DOWN each objection above in a way that:
+- Doesn't feel like pressure or manipulation
+- Acknowledges the customer's feelings first
+- Reframes value rather than defending price/product
+- Written in a format ready to use as WA or DM reply
+
+================================================================
+UNTUK SETIAP OBJECTION, JANA:
+================================================================
+
+OBJECTION: [salin semula objection]
+
+1. REFRAME EMOSI (acknowledge dulu)
+   — Ayat opening yang menunjukkan seller faham perasaan pelanggan
+   — Bukan defensive, bukan terus counter
+
+2. REFRAME LOGIK
+   — Satu fakta atau perspektif baru yang mengubah cara pelanggan nampak nilai
+   — Bukan hujah — lebih kepada soalan atau cerita pendek
+
+3. BUKTI SOSIAL YANG RELEVAN
+   — Jenis social proof yang paling meyakinkan untuk target ini
+   — Format: testimoni ringkas, nombor, atau perbandingan
+
+4. REPLY WA SIAP GUNA (3 variasi)
+   Variasi A — Pendek & Warm (2-3 ayat)
+   Variasi B — Medium dengan value add (4-5 ayat)
+   Variasi C — Direct & confident (2-3 ayat)
+
+5. SOALAN BALAS (untuk qualify lebih lanjut)
+   — 1-2 soalan yang buka dialog tanpa rasa seperti interrogation
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Hasilkan dalam format boleh guna terus sebagai reply WA atau DM. Bukan format esei.
+- Setiap reply mesti terasa seperti manusia tulis — bukan template korporat
+- Jangan gunakan urgency palsu atau klaim yang tidak boleh dibuktikan
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — gaya bahasa berbeza mengikut target
+
+--- TAMAT PROMPT / END PROMPT ---

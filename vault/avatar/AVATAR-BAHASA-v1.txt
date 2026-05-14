@@ -1,0 +1,94 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Universal / Semua Niche
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, bahasa, copywriting, ayat, perkataan, slang, gaya bahasa
+KEMASKINI  : 11/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller mengenal pasti BAHASA SEBENAR yang digunakan pelanggan mereka —
+perkataan, frasa, slang, dan cara mereka bercerita tentang masalah dan keinginan mereka.
+Guna output ini untuk tulis caption, skrip, dan content yang terasa "macam cakap dengan kawan".
+
+This prompt helps sellers identify the REAL LANGUAGE their customers use —
+words, phrases, slang, and the way they talk about their problems and desires.
+Use this output to write captions, scripts, and content that feels like "talking to a friend".
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Tolong bantu saya kenal pasti bahasa sebenar, frasa, dan gaya percakapan yang digunakan oleh pembeli ideal saya.
+Saya nak guna ini untuk tulis content yang terasa asli dan relatable.
+
+I am a seller selling [NAMA PRODUK / PRODUCT NAME].
+Please help me identify the real language, phrases, and conversational style used by my ideal buyer.
+I want to use this to write content that feels authentic and relatable.
+
+ANALISA DAN JAWAB SEMUA BAHAGIAN BERIKUT / ANALYSE AND ANSWER ALL SECTIONS:
+
+1. PERKATAAN MASALAH / PROBLEM WORDS
+   - Bagaimana mereka describe masalah mereka dalam ayat sendiri?
+   - Perkataan atau frasa spesifik yang mereka guna bila cerita tentang masalah ini?
+   - Senaraikan 10-15 perkataan atau frasa yang sering muncul.
+   - How do they describe their problem in their own words? List 10–15 specific words/phrases.
+
+2. PERKATAAN IMPIAN / DREAM WORDS
+   - Bagaimana mereka describe hasil atau impian yang mereka nak?
+   - Ayat yang mereka guna bila bayangkan kehidupan yang lebih baik?
+   - Senaraikan 10-15 perkataan atau frasa tentang keinginan mereka.
+   - How do they describe their desired outcome? List 10–15 words/phrases about their dreams.
+
+3. GAYA BAHASA & SLANG / LANGUAGE STYLE & SLANG
+   - Adakah mereka guna Bahasa Malaysia formal, Manglish, atau campur?
+   - Slang generasi atau komuniti mereka yang biasa digunakan?
+   - Emojis atau simbol yang biasa mereka guna dalam teks/komen?
+   - Do they use formal BM, Manglish, or a mix? What slang, generational terms, or emojis do they use?
+
+4. CARA MEREKA BERTANYA / HOW THEY ASK QUESTIONS
+   - Soalan apa yang mereka tanya dalam komen atau DM?
+   - Bagaimana format soalan mereka — formal atau santai?
+   - Senaraikan 5-8 soalan biasa yang mereka mungkin tanya.
+   - What questions do they ask in comments or DMs? List 5–8 common questions.
+
+5. CARA MEREKA BAGI TESTIMONI / HOW THEY GIVE TESTIMONIALS
+   - Bagaimana pelanggan yang puas hati biasanya cerita tentang produk?
+   - Perkataan apa yang muncul dalam ulasan positif produk jenis ini?
+   - Apa yang mereka highlight dalam testimonial — perasaan, hasil, atau pengalaman?
+   - How do satisfied customers typically describe the product? What words appear in positive reviews?
+
+6. AYAT-AYAT UNTUK COPYWRITING / COPY-READY PHRASES
+   - Berikan 5 hook / ayat pembuka yang guna bahasa mereka sendiri
+   - Berikan 5 CTA (call-to-action) dalam bahasa yang terasa semula jadi bagi mereka
+   - Give 5 hooks and 5 CTAs written in their own natural language.
+
+FORMAT OUTPUT / OUTPUT FORMAT:
+Susun mengikut bahagian berlabel. Bagi contoh ayat sebenar — bukan teori.
+Gunakan bahasa yang sama dengan pembeli tersebut dalam output anda.
+Organise by labelled sections. Give real example phrases — not theory.
+Use the same language style as the buyers in your output.
+
+PERATURAN / RULES:
+- Guna bahasa yang SEBENAR dipakai oleh kumpulan ini — bukan bahasa formal atau AI-generated
+  Use language ACTUALLY used by this group — not formal or AI-sounding language
+- Ambil kira perbezaan usia dan platform (TikTok vs Facebook vs WhatsApp)
+  Account for age and platform differences (TikTok vs Facebook vs WhatsApp)
+- Konteks Malaysia — bahasa, slang, dan budaya tempatan
+  Malaysian context — local language, slang, and culture
+
+--- TAMAT PROMPT / END PROMPT ---

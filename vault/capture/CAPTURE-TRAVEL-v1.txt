@@ -1,0 +1,94 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CAPTURE
+NICHE      : Pelancongan dan Travel
+PLATFORM   : Facebook, TikTok, Instagram, Threads, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : travel, pelancongan, pakej, umrah, haji, homestay, resort, percutian, trip, capture
+KEMASKINI  : 05/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller Pelancongan dan Travel untuk membalas komen untuk menarik lebih ramai DM.
+AI akan mengkaji produk dahulu sebelum menulis.
+
+This prompt helps Pelancongan dan Travel sellers to reply comments to attract more DMs.
+AI researches the product first before writing.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+KONTEKS / CONTEXT:
+Niche: Pelancongan dan Travel
+Produk / Product: [NAMA PRODUK / PRODUCT NAME]
+Jenis komen / Comment type: [TANYA HARGA / TANYA INFO / SKEPTIKAL / SEDIA BELI / OUT OF TOPIC]
+Komen sebenar / Actual comment: "[TAMPAL KOMEN DI SINI / PASTE COMMENT HERE]"
+Testimoni sebenar / Real testimonial: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+
+STRATEGI IKUT JENIS KOMEN / STRATEGY BY COMMENT TYPE:
+- Tanya harga: Jangan dedah harga terus — tunjukkan nilai dulu, arah ke DM
+  Do not reveal price directly — show value first, direct to DM
+- Tanya info: Jawab ringkas, bangkitkan curiosity untuk DM
+  Answer briefly, spark curiosity for DM
+- Skeptikal: Akui keraguan, beri 1 bukti konkrit, arah ke DM
+  Acknowledge doubt, give 1 concrete proof, direct to DM
+- Sedia beli: Balas pantas, beri laluan ke DM segera
+  Reply fast, give direct path to DM
+- Out of topic: Balas sopan, redirect ke produk secara halus
+  Reply politely, redirect to product subtly
+
+TUGAS / TASK:
+Tulis 3 versi balasan komen / Write 3 versions of comment reply:
+
+VERSI 1 (Mesra / Friendly):
+[balasan / reply]
+
+VERSI 2 (Profesional / Professional):
+[balasan / reply]
+
+VERSI 3 (Playful / Playful):
+[balasan / reply]
+
+PERATURAN / RULES:
+- Maksimum 3 ayat setiap versi / Maximum 3 sentences each
+- Nampak seperti manusia tulis, bukan bot / Look human-written, not bot
+- Elak "PM saya", "stok terhad" / Avoid "PM me", "limited stock"
+- Buat orang yang scroll pun nak DM / Make scrollers want to DM too
+
+INTEGRITY GUARDRAIL (WAJIB / MANDATORY):
+[TESTIMONI] Hanya guna testimoni yang seller sendiri nyatakan.
+Jika tiada, JANGAN cipta atau imply ada.
+Only use testimonials provided by seller. If none, DO NOT create any.
+
+[URGENCY] Hanya guna urgency yang seller sahkan benar.
+Jika tiada, JANGAN tambah "stok terhad" atau seumpamanya.
+Only use urgency confirmed by seller. If none, DO NOT add any.
+
+[KLAIM] Hanya buat klaim berdasarkan maklumat seller.
+JANGAN over-claim atau tambah kelebihan yang tidak disebut.
+Only claim based on seller info. DO NOT over-claim.
+
+[OFFER] Hanya sebut jaminan atau tawaran yang seller nyatakan.
+Jika tiada, JANGAN reka. If none, DO NOT fabricate.
+
+PRINSIP / PRINCIPLE:
+Output yang seller boleh pertahankan kebenarannya kepada pembeli.
+Output the seller can stand behind truthfully.
+
+--- TAMAT PROMPT / END PROMPT ---
+
+================================================================
+SIDEKICK — AI Sales Co-Pilot untuk Seller Malaysia
+================================================================

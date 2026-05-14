@@ -1,0 +1,73 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AD-CREATOR
+NICHE      : Ad Dari Testimoni Pelanggan
+PLATFORM   : TikTok, Facebook, Instagram Stories
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : ad, testimoni, ugc, tiktok script, facebook caption, story ad, social proof
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Testimoni pelanggan (raw): [TAMPAL TESTIMONI / PASTE TESTIMONIAL]
+
+Tulis semula testimoni di atas ke dalam 3 FORMAT IKLAN yang berbeza.
+Kekalkan kesahihan cerita asal — jangan tambah klaim yang tidak ada dalam testimoni.
+
+Rewrite the testimonial above into 3 DIFFERENT AD FORMATS.
+Maintain the authenticity of the original story — do not add claims not in the original.
+
+================================================================
+FORMAT 1 — SKRIP TIKTOK / REEL (30-60 saat)
+================================================================
+
+Struktur wajib:
+HOOK (3 saat pertama): [ayat/situasi yang buat orang berhenti scroll]
+PROBLEM AGITATION (5-8 saat): [emosi masalah dalam bahasa sebenar]
+SOLUTION BRIDGE (10-15 saat): [cerita transformasi dari testimoni]
+PROOF / CREDIBILITY (5 saat): [detail spesifik dari testimoni yang convincing]
+CTA (3-5 saat): [satu arahan jelas — bukan "click link in bio"]
+
+Tulis dalam format skrip video yang boleh dibaca semasa rakaman.
+Write as a video script ready to read during recording.
+
+================================================================
+FORMAT 2 — FACEBOOK CAPTION (Long-form storytelling)
+================================================================
+
+Struktur wajib:
+- Pembuka (ayat 1): Hook emosi
+- Badan (ayat 2-6): Cerita penuh dari testimoni — dalam bahasa perbualan
+- Penutup (ayat 7-8): Transformation + soft CTA
+- P.S. line: Satu kenyataan yang buat orang fikir
+
+Panjang: 120-180 patah perkataan.
+
+================================================================
+FORMAT 3 — STORY AD (Instagram / TikTok — 15 saat)
+================================================================
+
+Slide 1 (3 saat): Hook — 1 ayat besar, font besar
+Slide 2 (4 saat): Problem — apa yang pelanggan rasa sebelum
+Slide 3 (4 saat): Result — apa yang berubah (dari testimoni)
+Slide 4 (4 saat): CTA — satu arahan mudah
+
+Copy untuk setiap slide: maksimum 10 patah perkataan.
+Sertakan: emoji dan tone yang sesuai untuk visual story.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Output mesti boleh guna terus sebagai caption, WhatsApp blast, atau skrip video. Bukan format esei.
+- Kekalkan kesahihan testimoni asal — jangan inflate atau reka tambahan
+- Tulis dalam bahasa yang terasa natural untuk "[TARGET PELANGGAN / TARGET CUSTOMER]"
+- Tiada klaim perubatan, jaminan yang tidak boleh dibuktikan, atau urgency palsu
+
+--- TAMAT PROMPT / END PROMPT ---

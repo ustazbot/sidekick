@@ -1,0 +1,92 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CONVERT
+NICHE      : Pendidikan dan Kursus Online
+PLATFORM   : Facebook, TikTok, Instagram, Threads, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : pendidikan, kursus, kelas, online, coaching, mentor, webinar, workshop, ilmu, convert
+KEMASKINI  : 05/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller Pendidikan dan Kursus Online untuk menghantar mesej WhatsApp yang berkesan kepada lead.
+AI akan mengkaji produk dahulu sebelum menulis.
+
+This prompt helps Pendidikan dan Kursus Online sellers to send effective WhatsApp messages to leads.
+AI researches the product first before writing.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+KONTEKS SITUASI / SITUATION CONTEXT:
+Niche: Pendidikan dan Kursus Online
+Produk / Product: [NAMA PRODUK / PRODUCT NAME]
+Peringkat WA / WA Stage: [OPENING / QUALIFY / NURTURE / PUSH TO CLOSE]
+Siapa mula / Who started: [LEAD MULA DULU / SELLER MULA DULU]
+Situasi / Situation: [TERANGKAN APA YANG DAH BERLAKU / DESCRIBE WHAT HAPPENED]
+Tawaran sebenar / Real offer: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+Testimoni sebenar / Real testimonial: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+
+STRATEGI IKUT PERINGKAT / STRATEGY BY STAGE:
+- Opening: Acknowledge sumber lead, tunjukkan faham keperluan, buka dialog
+- Qualify: Soal 2-3 soalan yang buat lead rasa anda nak bantu, bukan jual
+- Nurture: Beri nilai baru atau update relevan — bukan sekadar follow up
+- Push to Close: Ringkaskan nilai, hilangkan risiko, beri 1 langkah mudah
+
+TUGAS / TASK:
+Tulis 3 versi mesej WA / Write 3 versions of WA message:
+
+VERSI 1 (Warm dan Personal):
+[mesej / message]
+
+VERSI 2 (Straight to Point):
+[mesej / message]
+
+VERSI 3 (Value-First):
+[mesej / message]
+
+PERATURAN / RULES:
+- Maksimum 5 baris setiap versi / Maximum 5 lines each
+- Sesuai dibaca di skrin telefon / Suitable for phone screen
+- Nampak seperti manusia tulis / Look human-written
+- Elak "just nak follow up", "macam mana pertimbangan?"
+  Avoid "just following up", "how's your consideration?"
+- Jangan bunyi desperate / Don't sound desperate
+
+INTEGRITY GUARDRAIL (WAJIB / MANDATORY):
+[TESTIMONI] Hanya guna testimoni yang seller sendiri nyatakan.
+Jika tiada, JANGAN cipta atau imply ada.
+Only use testimonials provided by seller. If none, DO NOT create any.
+
+[URGENCY] Hanya guna urgency yang seller sahkan benar.
+Jika tiada, JANGAN tambah "stok terhad" atau seumpamanya.
+Only use urgency confirmed by seller. If none, DO NOT add any.
+
+[KLAIM] Hanya buat klaim berdasarkan maklumat seller.
+JANGAN over-claim atau tambah kelebihan yang tidak disebut.
+Only claim based on seller info. DO NOT over-claim.
+
+[OFFER] Hanya sebut jaminan atau tawaran yang seller nyatakan.
+Jika tiada, JANGAN reka. If none, DO NOT fabricate.
+
+PRINSIP / PRINCIPLE:
+Output yang seller boleh pertahankan kebenarannya kepada pembeli.
+Output the seller can stand behind truthfully.
+
+--- TAMAT PROMPT / END PROMPT ---
+
+================================================================
+SIDEKICK — AI Sales Co-Pilot untuk Seller Malaysia
+================================================================

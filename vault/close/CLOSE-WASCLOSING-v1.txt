@@ -1,0 +1,76 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CLOSE
+NICHE      : Skrip Closing WhatsApp — 3 Variasi
+PLATFORM   : WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : closing, whatsapp, skrip closing, soft close, urgency close, value reframe
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Objection utama sebelum close: [OBJECTION UTAMA / MAIN OBJECTION]
+
+Jana skrip closing WhatsApp LENGKAP dalam 3 variasi untuk close "[TARGET PELANGGAN / TARGET CUSTOMER]"
+yang ada objection "[OBJECTION UTAMA / MAIN OBJECTION]".
+
+Generate COMPLETE WhatsApp closing scripts in 3 variations to close "[TARGET PELANGGAN / TARGET CUSTOMER]"
+who has the objection "[OBJECTION UTAMA / MAIN OBJECTION]".
+
+================================================================
+3 VARIASI SKRIP CLOSING
+================================================================
+
+VARIASI 1 — SOFT CLOSE (Gentle, relationship-first)
+Approach: Bina rasa percaya dulu, then close secara halus
+Sesuai untuk: Pelanggan yang masih warm tapi belum confident
+
+[Skrip penuh — format WhatsApp, boleh copy-paste terus]
+Panjang: 5-8 mesej dalam satu conversation flow
+
+---
+
+VARIASI 2 — VALUE REFRAME CLOSE
+Approach: Ubah perspektif dari "harga" ke "kos tidak beli"
+Sesuai untuk: Pelanggan yang kata mahal atau nak fikir dulu
+
+[Skrip penuh — format WhatsApp, boleh copy-paste terus]
+Panjang: 4-6 mesej
+
+---
+
+VARIASI 3 — URGENCY CLOSE (Berasaskan fakta — tiada urgency palsu)
+Approach: Highlight kenapa SEKARANG adalah masa terbaik — berdasarkan situasi sebenar
+Sesuai untuk: Pelanggan yang keep procrastinate
+
+[Skrip penuh — format WhatsApp, boleh copy-paste terus]
+Nota: Guna urgency BERASASKAN FAKTA sahaja (stok terhad sebenar, harga naik, musim dll)
+
+================================================================
+FORMAT SKRIP
+================================================================
+
+Setiap mesej dalam skrip, label dengan:
+[Seller]: [mesej]
+[Expected customer response]: [apa yang biasanya pelanggan balas]
+[Seller]: [follow-up]
+
+Tulis dalam bahasa WhatsApp sebenar — shortform, emoji, natural.
+Write in real WhatsApp language — shortforms, emoji, natural flow.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Hasilkan dalam format boleh guna terus sebagai caption, WhatsApp blast, atau skrip video.
+- Setiap skrip mesti terasa seperti manusia — bukan sales script korporat
+- Tiada urgency palsu, testimoni rekaan, atau klaim tidak berasas
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — tone berbeza untuk target berbeza
+
+--- TAMAT PROMPT / END PROMPT ---

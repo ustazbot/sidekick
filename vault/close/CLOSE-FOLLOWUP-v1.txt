@@ -1,0 +1,75 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CLOSE
+NICHE      : Follow Up Sequence — Prospek Yang Jadi Sejuk
+PLATFORM   : WhatsApp, DM
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : follow up, prospek sejuk, re-engage, whatsapp sequence, ghost, tidak reply
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Kenapa prospek jadi sejuk: [SEBAB PROSPEK SEJUK / REASON PROSPECT WENT COLD]
+
+Jana urutan 3 MESEJ FOLLOW UP untuk re-engage prospek "[TARGET PELANGGAN / TARGET CUSTOMER]"
+yang jadi sejuk kerana "[SEBAB PROSPEK SEJUK / REASON PROSPECT WENT COLD]".
+Setiap mesej mesti ada ANGLE berbeza — bukan hantar mesej yang sama berulang kali.
+
+Generate a 3-MESSAGE FOLLOW UP SEQUENCE to re-engage a prospect who went cold.
+Each message must have a DIFFERENT ANGLE — not the same message repeated.
+
+================================================================
+3 MESEJ FOLLOW UP — ANGLE BERBEZA
+================================================================
+
+MESEJ 1 — CHECK-IN (Hantar selepas 2-3 hari sejuk)
+Angle: Tunjukkan anda ambil berat, bukan nak jual
+Nada: Kawan yang ambil berat, bukan seller yang desperate
+Goal: Buka semula dialog, bukan terus close
+
+[Mesej penuh — format WhatsApp, boleh copy-paste]
+
+---
+
+MESEJ 2 — VALUE ADD (Hantar 3-5 hari selepas Mesej 1 jika tiada reply)
+Angle: Beri nilai baru — tip, info, atau insight berkaitan yang berguna untuk mereka
+Nada: Genuinely helpful, bukan "jual lagi"
+Goal: Remind mereka anda wujud dengan cara yang bermanfaat
+
+[Mesej penuh — format WhatsApp, boleh copy-paste]
+Sertakan: Tip / fakta / info pendek yang relevan dengan [NAMA PRODUK / PRODUCT NAME]
+
+---
+
+MESEJ 3 — FINAL OFFER (Hantar 5-7 hari selepas Mesej 2)
+Angle: Beri laluan mudah untuk mereka respond atau close dengan graceful
+Nada: Confident tapi tidak pressure — beri pilihan
+Goal: Either close atau dapat closure — jangan biarkan dalam limbo
+
+[Mesej penuh — format WhatsApp, boleh copy-paste]
+
+================================================================
+NOTA TAMBAHAN UNTUK SETIAP MESEJ
+================================================================
+
+Selepas setiap mesej, tambah:
+- Bila hantar: [masa dan hari terbaik]
+- Jika tiada reply: [apa buat seterusnya]
+- Jika dapat reply: [cara respond]
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti kawan yang genuinely ambil berat — bukan salesperson yang desperate.
+- Tiada ayat pressure, fake urgency, atau manipulasi
+- Setiap mesej mesti BERBEZA angle — jangan ulang mesej sama
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — tone berbeza untuk target berbeza
+
+--- TAMAT PROMPT / END PROMPT ---

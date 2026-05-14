@@ -1,0 +1,61 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : DEFEND
+NICHE      : Ubah Pembeli Jadi Brand Advocate
+PLATFORM   : WhatsApp, Instagram, TikTok, Email
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : retention, brand advocate, post purchase, repeat buyer, word of mouth, pelanggan setia
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Pengalaman semasa pelanggan selepas beli: [PENGALAMAN SELEPAS BELI / POST PURCHASE EXPERIENCE]
+
+Bantu saya reka 5 TOUCHPOINT untuk mengubah pembeli "[TARGET PELANGGAN / TARGET CUSTOMER]"
+menjadi Brand Advocate yang secara aktif recommend produk kepada orang lain.
+
+Help me design 5 TOUCHPOINTS to turn a buyer into a Brand Advocate
+who actively recommends the product to others.
+
+================================================================
+5 TOUCHPOINT — DARI PEMBELI KE BRAND ADVOCATE
+================================================================
+
+Untuk SETIAP touchpoint, berikan:
+
+TOUCHPOINT [1-5]: [Nama / Label]
+Bila: [timing selepas pembelian — contoh: sejurus beli / 3 hari / 1 minggu / 1 bulan]
+Platform: [WA / IG DM / email / phone call]
+Tujuan: [apa yang nak dicapai di touchpoint ini]
+Mesej / Content siap guna:
+[Teks penuh yang boleh copy-paste atau adapt — dalam bahasa WhatsApp / perbualan]
+Kenapa berkesan untuk "[TARGET PELANGGAN / TARGET CUSTOMER]":
+[Penjelasan ringkas]
+
+================================================================
+JOURNEY MAP: PEMBELI → BRAND ADVOCATE
+================================================================
+
+Selepas 5 touchpoint, lukiskan ringkasan journey dalam format ini:
+
+Beli → [Touchpoint 1] → [Touchpoint 2] → [Touchpoint 3] → [Touchpoint 4] → [Touchpoint 5] → Brand Advocate
+
+Untuk setiap anak panah, nyatakan: APA yang seller buat dan APA yang pelanggan rasa.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti kawan yang genuinely ambil berat — bukan strategi korporat.
+- Touchpoint mesti realistic untuk seller kecil / sederhana — bukan strategi brand besar
+- Fokus pada HUBUNGAN, bukan transaksi
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — apa yang meaningful untuk mereka
+- Tiada teknik manipulasi atau janji kosong
+
+--- TAMAT PROMPT / END PROMPT ---

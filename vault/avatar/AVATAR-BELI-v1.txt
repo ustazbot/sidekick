@@ -1,0 +1,83 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Universal / Semua Niche
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, pemicu beli, bantahan, keputusan beli, objection, trigger
+KEMASKINI  : 11/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller memahami APA yang mendorong pelanggan untuk membeli — dan APA yang menghalang mereka.
+Guna output ini untuk bina skrip jualan dan content yang tepat menangani keraguan pembeli.
+
+This prompt helps sellers understand WHAT drives customers to buy — and WHAT holds them back.
+Use this output to build sales scripts and content that precisely address buyer hesitation.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Tolong bantu saya fahami faktor-faktor yang mendorong dan menghalang pembeli ideal saya daripada membuat keputusan beli.
+
+I am a seller selling [NAMA PRODUK / PRODUCT NAME].
+Please help me understand the factors that drive and prevent my ideal buyer from making a purchase decision.
+
+ANALISA DAN JAWAB SEMUA BAHAGIAN BERIKUT / ANALYSE AND ANSWER ALL SECTIONS:
+
+1. PEMICU BELI / BUYING TRIGGERS
+   - Apakah 3 sebab utama yang mendorong mereka untuk beli sekarang?
+   - Situasi atau peristiwa apa yang buat mereka rasa "perlu beli hari ni"?
+   - Apakah yang perlu mereka lihat, dengar, atau rasa untuk terus beli?
+   - What top 3 reasons drive them to buy NOW? What situation creates urgency?
+
+2. NILAI YANG MEREKA CARI / VALUES THEY SEEK
+   - Apakah yang paling penting bagi mereka dalam produk ini? (Kualiti / harga / kemudahan / status)
+   - Apa yang mereka mahu rasa selepas beli — bukan cuma dapat?
+   - What matters most to them in this product? What do they want to FEEL after buying?
+
+3. BANTAHAN UTAMA / MAIN OBJECTIONS
+   - Apakah 5 bantahan atau keraguan paling biasa mereka ada?
+   - Apa kata-kata exact yang mereka guna untuk tolak tawaran?
+   - What are the 5 most common objections? What exact words do they use to reject?
+
+4. SEBAB TAK BELI / REASONS NOT TO BUY
+   - Apakah yang paling sering menghentikan mereka pada saat akhir?
+   - Apa perbandingan yang mereka buat dengan pilihan lain?
+   - Siapa lagi yang mempengaruhi keputusan beli mereka (keluarga / rakan)?
+   - What stops them at the last moment? Who else influences their decision?
+
+5. BUKTI YANG MEREKA PERLUKAN / PROOF THEY NEED
+   - Apakah jenis bukti yang paling meyakinkan mereka? (Testimoni / demo / jaminan / nombor)
+   - Daripada siapa testimoni yang paling mereka percayai?
+   - Apa jaminan yang perlu ada untuk kurangkan risiko dalam fikiran mereka?
+   - What type of proof convinces them most? What guarantee reduces their perceived risk?
+
+FORMAT OUTPUT / OUTPUT FORMAT:
+Susun dalam dua bahagian jelas: PEMICU BELI dan HALANGAN BELI.
+Sertakan contoh ayat sebenar yang pembeli mungkin cakap atau fikir.
+Organise into two clear sections: BUYING TRIGGERS and BUYING BARRIERS.
+Include example real phrases buyers might say or think.
+
+PERATURAN / RULES:
+- Berdasarkan psikologi pengguna yang benar — bukan spekulasi
+  Base on real consumer psychology — not speculation
+- Bantahan mesti realistik dan spesifik, bukan generik
+  Objections must be realistic and specific, not generic
+- Fokus pada konteks dan budaya membeli-belah Malaysia
+  Focus on Malaysian shopping culture and context
+
+--- TAMAT PROMPT / END PROMPT ---

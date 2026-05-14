@@ -1,0 +1,56 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Profil Permukaan — Siapa Dia Sebenarnya
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, demografi, lifestyle, rutin harian, tabiat beli
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Bantu saya bina profil permukaan (surface profile) pelanggan ideal saya — siapa dia dalam kehidupan harian.
+
+Please help me build the surface profile of my ideal customer — who they are in daily life.
+
+================================================================
+BAHAGIAN 1 — PROFIL ASAS / BASIC PROFILE
+================================================================
+
+Bina profil berikut berdasarkan target "[TARGET PELANGGAN / TARGET CUSTOMER]" yang membeli [NAMA PRODUK / PRODUCT NAME]:
+
+1. Demografi (usia, jantina, lokasi, pendapatan, pekerjaan, status perkahwinan)
+2. Rutin harian — pagi sampai malam
+3. Platform media sosial yang mereka guna dan CARA mereka gunakannya (scroll pasif / aktif komen / beli dari IG/TikTok)
+4. Cara membeli-belah (online / offline / hybrid) dan platform pilihan
+5. Siapa yang mempengaruhi keputusan beli mereka (pasangan / rakan / influencer / review)
+
+================================================================
+BAHAGIAN 2 — FORMAT OUTPUT WAJIB
+================================================================
+
+Untuk SETIAP trait di atas, jawab dalam format ini:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+| [situasi konkrit dalam hidup dia] | [perasaan sebenar] | [ayat exact dia cakap/fikir] | [cara seller boleh approach] |
+
+Buat sekurang-kurangnya 3 rows per bahagian.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan mereka.
+- Fokus konteks Malaysia — nama tempat, situasi tempatan, bahasa Manglish
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — bukan generik
+- Jangan reka fakta. Jika tidak pasti, nyatakan anggaran berdasarkan logik pasaran
+
+--- TAMAT PROMPT / END PROMPT ---

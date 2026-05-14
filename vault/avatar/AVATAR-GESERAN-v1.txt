@@ -1,0 +1,73 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Geseran Psikologi — Apa Yang Menghalang Dia Dari Beli
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, psychological friction, halangan beli, trust issue, bantahan dalaman
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Bantu saya fahami GESERAN PSIKOLOGI — semua yang menghalang pelanggan ini dari membuat keputusan beli,
+walaupun mereka berminat dan ada keperluan.
+
+Help me understand PSYCHOLOGICAL FRICTION — everything that stops this customer from buying,
+even when they are interested and have the need.
+
+================================================================
+BAHAGIAN 1 — FRICTION POINTS
+================================================================
+
+Target: [TARGET PELANGGAN / TARGET CUSTOMER] berkaitan dengan [NAMA PRODUK / PRODUCT NAME]
+
+Analisa semua Friction Points berikut:
+
+1. BANTAHAN DALAMAN (Internal Objections)
+   — Apa yang mereka kata dalam kepala mereka sendiri sebelum klik beli?
+   — Bukan bantahan yang mereka sebut kepada seller, tapi monolog dalaman
+
+2. PENGALAMAN BURUK LEPAS (Past Bad Experiences)
+   — Apa pengalaman negatif dengan produk serupa yang masih mereka ingat?
+   — Trauma atau kekecewaan yang menjadikan mereka lebih berhati-hati
+
+3. TRUST ISSUES
+   — Kenapa mereka ragu-ragu untuk percaya seller baru atau produk baru?
+   — Apa yang buat mereka rasa "mungkin scam" atau "terlalu bagus untuk jadi kenyataan"
+
+4. FRICTION SOSIAL
+   — Apa yang orang lain (keluarga, rakan, pasangan) mungkin kata jika mereka beli?
+   — Tekanan sosial yang menjadi penghalang keputusan
+
+5. HALANGAN LOGISTIK
+   — Masa, duit, proses — apa yang secara praktikal menyukarkan pembelian?
+
+================================================================
+BAHAGIAN 2 — FORMAT OUTPUT WAJIB
+================================================================
+
+Untuk SETIAP Friction Point, jawab dalam format ini:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+| [situasi yang mencetuskan friction ini] | [emotional state] | [exact phrase dalam kepala atau ke kawan] | [cara seller address friction ini dalam content/closing] |
+
+Buat sekurang-kurangnya 3 rows per Friction Point.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan rapat mereka.
+- Friction mesti spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — bukan generik
+- Ini adalah peta halangan sebenar — bukan senarai bantahan jualan standard
+- Fokus konteks Malaysia: kepercayaan terhadap seller online, isu scam, budaya "nak tanya dulu"
+
+--- TAMAT PROMPT / END PROMPT ---

@@ -1,0 +1,59 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Dunia Dalaman — Apa Yang Dia Rasa Tapi Tak Sebut
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, emosi tersembunyi, impian rahsia, ketegangan emosi, hidden desire
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Bantu saya fahami dunia dalaman pelanggan ini — bukan apa yang mereka cakap, tapi apa yang mereka RASA.
+Ini bukan profil demografi. Ini tentang Hidden Desire, Internal Fear, dan Emotional Tension yang mereka bawa setiap hari.
+
+Help me understand the inner world of this customer — not what they say, but what they FEEL.
+This is about Hidden Desire, Internal Fear, and Emotional Tension they carry daily.
+
+================================================================
+BAHAGIAN 1 — EMOTIONAL TENSION HARIAN
+================================================================
+
+Target: [TARGET PELANGGAN / TARGET CUSTOMER] yang berkaitan dengan [NAMA PRODUK / PRODUCT NAME]
+
+Terokai:
+1. INTERNAL FEAR — Apa yang mereka takut secara senyap (bukan takut yang mereka akui)
+2. HIDDEN DESIRE — Apa yang mereka BENAR-BENAR mahukan tapi malu nak sebut
+3. EMOTIONAL TENSION — Konflik dalaman antara apa yang mereka nak vs apa yang mereka buat
+4. IDENTITI GAP — Jurang antara siapa mereka sekarang vs siapa yang mereka mahu jadi
+5. TRIGGER EMOSI — Situasi atau detik yang mencetuskan rasa tidak puas / mahu berubah
+
+================================================================
+BAHAGIAN 2 — FORMAT OUTPUT WAJIB
+================================================================
+
+Untuk SETIAP elemen di atas, jawab dalam format ini:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+| [situasi konkrit yang mencetuskan emosi ini] | [nama emosi + intensiti] | [monolog dalaman atau ayat dia sebut pada kawan] | [how to speak to this emotion in content] |
+
+Buat sekurang-kurangnya 3 rows per elemen.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan mereka atau dalam kepala mereka sendiri.
+- Ini bukan tentang apa yang SELLER mahu dengar — ini tentang kebenaran psikologi pelanggan
+- Gunakan perspektif empati — masuk ke dalam kepala mereka
+- Fokus konteks Malaysia — budaya, tekanan sosial, nilai keluarga
+
+--- TAMAT PROMPT / END PROMPT ---

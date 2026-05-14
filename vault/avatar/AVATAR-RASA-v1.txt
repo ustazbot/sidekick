@@ -1,0 +1,84 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Universal / Semua Niche
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, pelanggan, psikografi, emosi, takut, impian, nilai, perasaan
+KEMASKINI  : 11/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller memahami dunia dalaman pelanggan — perasaan, ketakutan, impian, dan nilai hidup mereka.
+Guna output ini untuk menulis content yang benar-benar menyentuh hati pembeli.
+
+This prompt helps sellers understand the inner world of their customer — feelings, fears, dreams and values.
+Use this output to write content that truly resonates with buyers.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Tolong bantu saya fahami psikografi dan dunia emosi dalaman pembeli ideal saya.
+
+I am a seller selling [NAMA PRODUK / PRODUCT NAME].
+Please help me understand the psychographics and inner emotional world of my ideal buyer.
+
+ANALISA DAN JAWAB SEMUA BAHAGIAN BERIKUT / ANALYSE AND ANSWER ALL SECTIONS:
+
+1. KETAKUTAN TERBESAR / BIGGEST FEARS
+   - Apa yang paling mereka takut dalam konteks produk ini?
+   - Apa yang mereka takut orang lain fikir tentang mereka?
+   - Apa yang mereka takut berlaku jika mereka tidak bertindak?
+   - What are their biggest fears related to this product/situation?
+
+2. IMPIAN & KEINGINAN / DREAMS & DESIRES
+   - Apa yang mereka benar-benar mahukan dalam hidup mereka?
+   - Apa yang mereka impikan secara senyap-senyap?
+   - Versi diri yang mereka nak jadi selepas guna produk ini?
+   - What do they truly want? What is their secret dream? Who do they want to become?
+
+3. NILAI & KEPERCAYAAN / VALUES & BELIEFS
+   - Apa yang paling penting bagi mereka dalam membuat keputusan beli?
+   - Kepercayaan apa yang mereka ada tentang produk jenis ini?
+   - Apa yang mereka percaya tentang diri sendiri?
+   - What values drive their decisions? What do they believe about this product type?
+
+4. PERASAAN SEKARANG / CURRENT FEELINGS
+   - Bagaimana perasaan mereka SEBELUM jumpa penyelesaian?
+   - Emosi apa yang mendorong mereka untuk mencari produk ini?
+   - Apa yang mereka rasa sudah cuba tapi gagal?
+   - How do they feel BEFORE finding a solution? What emotions drive the search?
+
+5. IDENTITI & HARGA DIRI / IDENTITY & SELF-IMAGE
+   - Bagaimana mereka lihat diri sendiri sekarang?
+   - Bagaimana mereka mahu orang lain lihat mereka?
+   - Bagaimana produk ini menyokong atau mengancam identiti mereka?
+   - How do they see themselves now vs how they want to be seen?
+
+FORMAT OUTPUT / OUTPUT FORMAT:
+Bagi jawapan dalam bentuk peta emosi yang jelas dan boleh saya guna untuk tulis content.
+Gunakan bahasa yang ringkas dan mudah difahami.
+Provide a clear emotional map I can use to write better content. Use simple, direct language.
+
+PERATURAN / RULES:
+- Tulis dari perspektif psikologi pelanggan yang jujur — bukan apa yang seller mahu dengar
+  Write from honest customer psychology — not what sellers want to hear
+- Gunakan empati — cuba masuk ke dalam minda mereka
+  Use empathy — try to enter their mindset
+- Fokus pada konteks sosial dan budaya Malaysia
+  Focus on Malaysian social and cultural context
+
+--- TAMAT PROMPT / END PROMPT ---

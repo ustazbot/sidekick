@@ -1,0 +1,86 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Profil Lengkap — Avatar Pelanggan Siap Guna
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, profil lengkap, full avatar, customer persona, siap guna
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Jana PROFIL AVATAR PELANGGAN LENGKAP yang menggabungkan semua dimensi — demografi, psikografi,
+Psychological Friction, Buying Trigger, dan Bahasa Sebenar mereka.
+Output ini mesti siap untuk saya paste ke mana-mana AI tool atau content brief terus.
+
+Generate a COMPLETE CUSTOMER AVATAR combining all dimensions — demographics, psychographics,
+Psychological Friction, Buying Trigger, and Real Language.
+Output must be ready to paste into any AI tool or content brief directly.
+
+================================================================
+STRUKTUR AVATAR LENGKAP
+================================================================
+
+Target: "[TARGET PELANGGAN / TARGET CUSTOMER]" yang membeli [NAMA PRODUK / PRODUCT NAME]
+
+---
+
+## 1. SIAPA DIA (Surface Profile)
+Nama Avatar: [beri nama fiksyen yang sesuai]
+Usia, jantina, lokasi, pendapatan, pekerjaan, status
+
+## 2. HARI BIASA DIA
+Ceritakan rutin harian dari bangun tidur sampai tidur malam.
+Bila dan di mana dia encounter produk jenis ini dalam rutin harian?
+
+## 3. DUNIA DALAMAN (Inner World)
+- Hidden Desire: [apa yang dia benar-benar mahu]
+- Internal Fear: [apa yang dia takut secara senyap]
+- Emotional Tension: [konflik dalaman yang dia bawa setiap hari]
+- Identiti yang dia nak capai: [versi diri yang dia impikan]
+
+## 4. PSYCHOLOGICAL FRICTION (Apa Yang Halang Dia Beli)
+Senaraikan 5 Friction Points utama dengan situasi sebenar dan ayat dalaman mereka.
+
+## 5. BUYING TRIGGER (Apa Yang Akhirnya Buat Dia Beli)
+Senaraikan 3 Emotional Tipping Points dan 2 External Events yang mencetuskan pembelian.
+
+## 6. BAHASA SEBENAR DIA
+- 5 ayat exact bila describe masalah (dalam bahasa WhatsApp/TikTok)
+- 5 ayat exact bila describe impian
+- 3 monolog dalaman sebelum klik beli
+- 3 Hook siap guna untuk content
+
+---
+
+## 7. FORMAT WAJIB — MARKETING ANGLE TABLE
+
+Untuk setiap bahagian utama (Friction, Trigger, Bahasa), sertakan:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+
+---
+
+## 8. RINGKASAN SATU PERENGGAN
+Tulis 1 perenggan ringkas (5-7 ayat) yang menggambarkan avatar ini secara holistik.
+Tulis dalam orang pertama — seolah-olah dia yang bercerita tentang dirinya sendiri.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan mereka.
+- Output mesti SIAP GUNA — boleh copy-paste terus ke content brief atau AI tool lain
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" dan [NAMA PRODUK / PRODUCT NAME]
+- Konteks Malaysia: nama, situasi, bahasa, budaya tempatan
+- Beri nama fiksyen yang relatable (contoh: Kak Yana, Amir, Cik Siti)
+
+--- TAMAT PROMPT / END PROMPT ---

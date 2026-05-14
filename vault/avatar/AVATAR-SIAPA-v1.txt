@@ -1,0 +1,81 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Universal / Semua Niche
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, pelanggan, demografi, siapa dia, profil, usia, pendapatan
+KEMASKINI  : 11/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller memahami SIAPA pembeli ideal mereka dari sudut demografi.
+Guna output AI sebagai asas untuk membina avatar pelanggan yang tepat.
+
+This prompt helps sellers understand WHO their ideal buyer is from a demographic angle.
+Use the AI output as a foundation for building an accurate customer avatar.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Tolong bantu saya kaji dan bina profil demografi pembeli ideal saya secara mendalam.
+
+I am a seller selling [NAMA PRODUK / PRODUCT NAME].
+Please help me research and build a detailed demographic profile of my ideal buyer.
+
+ANALISA DAN JAWAB SEMUA BAHAGIAN BERIKUT / ANALYSE AND ANSWER ALL SECTIONS:
+
+1. USIA / AGE
+   - Julat usia yang paling mungkin membeli produk ini?
+   - Usia "sweet spot" — golongan paling ramai dalam kumpulan ini?
+   - Age range most likely to buy, and the sweet spot age group?
+
+2. JANTINA / GENDER
+   - Adakah produk ini lebih kepada satu jantina, atau neutral?
+   - Nisbah anggaran lelaki vs perempuan yang membeli?
+   - Is this product gender-skewed or neutral? Estimated ratio?
+
+3. LOKASI / LOCATION
+   - Di mana mereka tinggal di Malaysia? (Bandar besar / suburban / luar bandar)
+   - Negeri atau kawasan mana paling relevan?
+   - Where in Malaysia do they live? Which states/areas are most relevant?
+
+4. PEKERJAAN & PENDAPATAN / OCCUPATION & INCOME
+   - Jenis pekerjaan yang biasa mereka ada (kerajaan / swasta / sendiri / student)?
+   - Julat pendapatan bulanan yang paling relevan?
+   - Common job types and monthly income range?
+
+5. STATUS & GAYA HIDUP / STATUS & LIFESTYLE
+   - Status perkahwinan yang paling biasa (single / berkahwin / ibu bapa)?
+   - Aktiviti harian dan hobi mereka?
+   - Platform media sosial yang mereka guna paling banyak?
+   - Cara mereka lazimnya membeli-belah (online / offline / hybrid)?
+   - Marital status, daily activities, hobbies, social platforms, shopping habits?
+
+FORMAT OUTPUT / OUTPUT FORMAT:
+Bagi jawapan dalam bentuk PROFIL RINGKAS berstruktur yang boleh saya simpan dan guna semula.
+Labelkan setiap bahagian dengan jelas.
+Provide answers as a structured CONCISE PROFILE I can save and reuse. Label each section clearly.
+
+PERATURAN / RULES:
+- Berdasarkan fakta dan kajian pasaran — jangan reka maklumat
+  Base on facts and market research — do not fabricate
+- Jika tiada data tepat, beri anggaran berdasarkan logik pasaran Malaysia
+  If no exact data, give estimates based on Malaysian market logic
+- Fokus pada konteks dan budaya Malaysia
+  Focus on Malaysian context and culture
+
+--- TAMAT PROMPT / END PROMPT ---

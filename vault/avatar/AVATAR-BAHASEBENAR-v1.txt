@@ -1,0 +1,78 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AVATAR
+NICHE      : Bahasa Sebenar — Kata-Kata Exact Yang Dia Guna
+PLATFORM   : ChatGPT, Claude, Gemini, DeepSeek
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : avatar, persona, bahasa pelanggan, copywriting, frasa, slang, monolog, voice of customer
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Bantu saya kenal pasti BAHASA SEBENAR yang digunakan pelanggan ini —
+kata-kata exact, frasa, slang, dan cara mereka bercerita dalam WhatsApp, TikTok komen, dan antara kawan.
+Saya nak guna ini untuk tulis content yang terasa seperti dari orang sebenar, bukan AI.
+
+Help me identify the REAL LANGUAGE this customer uses —
+exact words, phrases, slang, and how they talk in WhatsApp, TikTok comments, and among friends.
+I want to use this to write content that sounds like a real person, not AI.
+
+================================================================
+BAHAGIAN 1 — PETA BAHASA PELANGGAN
+================================================================
+
+Target: [TARGET PELANGGAN / TARGET CUSTOMER] berkaitan dengan [NAMA PRODUK / PRODUCT NAME]
+
+1. BAHASA MASALAH (Problem Language)
+   — Ayat exact yang mereka guna bila describe masalah yang produk ini selesaikan
+   — Bukan bahasa formal — bahasa WhatsApp / sembang kawan
+   — Senaraikan 10 frasa / ayat
+
+2. BAHASA IMPIAN (Dream Language)
+   — Ayat yang mereka guna bila bayangkan hidup/situasi yang lebih baik
+   — Apa yang mereka cakap bila dapat hasil yang diinginkan
+   — Senaraikan 10 frasa / ayat
+
+3. BAHASA RAGU (Doubt Language)
+   — Apa yang mereka sebut bila ragu-ragu atau nak tolak tawaran
+   — Ayat bantahan yang keluar secara natural dari mulut mereka
+   — Senaraikan 8 frasa / ayat
+
+4. MONOLOG SEBELUM BELI (Pre-Purchase Inner Voice)
+   — Apa yang mereka fikirkan dalam kepala sebelum decide nak beli
+   — Senaraikan 5 monolog dalaman yang realistik
+
+5. BAHASA UNTUK COPYWRITING (Copy-Ready Language)
+   — 5 Hook / ayat pembuka yang guna bahasa mereka sendiri (sesuai untuk TikTok, caption, Reel)
+   — 5 CTA dalam bahasa yang terasa natural dan tidak pressure
+   — Gunakan gaya bahasa yang SAMA dengan target pelanggan ini
+
+================================================================
+BAHAGIAN 2 — FORMAT OUTPUT WAJIB
+================================================================
+
+Untuk setiap Bahasa Masalah dan Bahasa Impian, sertakan dalam format ini:
+
+| Situasi Sebenar | Emosi Yang Dia Rasa | Ayat Dia Akan Sebut | Angle Marketing |
+|-----------------|---------------------|---------------------|-----------------|
+| [bila/di mana ayat ini diucapkan] | [emosi semasa cakap] | [ayat exact — Melayu/Manglish] | [cara guna ayat ini dalam content] |
+
+Untuk Hook dan CTA — senaraikan terus tanpa table.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan mereka — Manglish, shortform, emoji kalau perlu.
+- Bahasa mesti sesuai dengan platform (TikTok lebih relax vs Facebook lebih panjang)
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — Gen Z berbeza dengan Millennial
+- Amik kira platform: TikTok komen vs WhatsApp group vs Facebook caption
+
+--- TAMAT PROMPT / END PROMPT ---

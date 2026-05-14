@@ -1,0 +1,73 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : ATTRACT
+NICHE      : Hook Dari Masalah Sebenar
+PLATFORM   : TikTok, Instagram Reels, Facebook, Carousel
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : hook, attract, masalah sebenar, pain point, caption, tiktok, reel, carousel
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Pain point dalam bahasa mereka sendiri: "[PAIN POINT SEBENAR / REAL PAIN POINT]"
+
+Jana 5 HOOK yang kuat dari masalah sebenar pelanggan di atas.
+Hook mesti ditulis dalam bahasa yang SAMA dengan cara pelanggan bercakap — bukan bahasa jualan.
+
+Generate 5 strong HOOKS from the real customer pain point above.
+Hooks must be written in the SAME language as how customers speak — not sales language.
+
+================================================================
+SPESIFIKASI HOOK
+================================================================
+
+Setiap hook mesti:
+- Dimulakan dengan situasi atau rasa yang pelanggan KENAL SENDIRI
+- Buat mereka berhenti scroll dalam 2-3 saat pertama
+- Tidak sound macam iklan — sound macam cerita kawan atau post biasa
+- Sesuai untuk platform yang ditentukan
+
+Format 5 Hook dalam struktur ini:
+
+HOOK 1 — Emotional (sentuh rasa, bukan logik)
+[Ayat hook] — 1-2 baris sahaja
+Kenapa berkesan: [penjelasan ringkas]
+Sesuai untuk: [TikTok caption / Reel opener / Carousel slide 1]
+
+HOOK 2 — Curiosity-Based (buat mereka nak tahu lebih)
+[Ayat hook]
+Kenapa berkesan: [penjelasan ringkas]
+Sesuai untuk: [platform]
+
+HOOK 3 — Relatable Situation (situasi yang mereka dah pernah alami)
+[Ayat hook]
+Kenapa berkesan: [penjelasan ringkas]
+Sesuai untuk: [platform]
+
+HOOK 4 — Bold Statement / Controversial (berani, provoke reaction)
+[Ayat hook]
+Kenapa berkesan: [penjelasan ringkas]
+Sesuai untuk: [platform]
+
+HOOK 5 — Story Opener (buka dengan cerita pendek)
+[Ayat hook — 2-3 ayat]
+Kenapa berkesan: [penjelasan ringkas]
+Sesuai untuk: [platform]
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti pelanggan bercakap dengan kawan mereka.
+- Hook mesti dari PERSPEKTIF PELANGGAN — bukan dari perspektif seller
+- Guna bahasa Melayu + Manglish natural — sesuai dengan "[TARGET PELANGGAN / TARGET CUSTOMER]"
+- Hasilkan 3 variasi — satu emotional, satu logical, satu curiosity-based (dalam 5 hook di atas)
+- Elakkan klaim yang tidak berasaskan fakta
+
+--- TAMAT PROMPT / END PROMPT ---

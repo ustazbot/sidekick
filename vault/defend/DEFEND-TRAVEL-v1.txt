@@ -1,0 +1,96 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : DEFEND
+NICHE      : Pelancongan dan Travel
+PLATFORM   : Facebook, TikTok, Instagram, Threads, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : travel, pelancongan, pakej, umrah, haji, homestay, resort, percutian, trip, defend
+KEMASKINI  : 05/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller Pelancongan dan Travel untuk menangani bantahan pembeli dengan empati dan bukti.
+AI akan mengkaji produk dahulu sebelum menulis.
+
+This prompt helps Pelancongan dan Travel sellers to handle buyer objections with empathy and evidence.
+AI researches the product first before writing.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+BANTAHAN YANG DITERIMA / OBJECTION RECEIVED:
+Niche: Pelancongan dan Travel
+Produk / Product: [NAMA PRODUK / PRODUCT NAME]
+Jenis bantahan / Objection type: [HARGA MAHAL / TAK PERCAYA / ADA TEMPAT LAIN MURAH / TAK URGENT / KENA TANYA KELUARGA / LAIN-LAIN]
+Bantahan sebenar / Actual objection: "[TULIS AYAT BANTAHAN SEBENAR / WRITE ACTUAL OBJECTION]"
+Kelebihan produk yang BENAR / REAL product advantages: [NYATAKAN FAKTA SEBENAR / STATE REAL FACTS]
+Testimoni sebenar / Real testimonial: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+
+STRATEGI IKUT JENIS BANTAHAN / STRATEGY BY OBJECTION TYPE:
+- Harga mahal: Value reframe — alihkan dari harga ke nilai sebenar
+  Value reframe — shift from price to real value
+- Tak percaya: Evidence first — biar bukti yang bercakap
+  Evidence first — let proof speak
+- Ada tempat lain: Differentiation — tunjukkan beza yang meaningful
+  Show meaningful difference, never badmouth competitor
+- Tak urgent: Consequence framing — tunjukkan kos tunggu (fakta sahaja)
+  Show cost of waiting (facts only, no fake urgency
+- Kena tanya keluarga: Include decision maker — jadikan mereka sekutu
+  Include decision maker — make them an ally
+
+TUGAS / TASK — DUA BAHAGIAN / TWO PARTS:
+
+BAHAGIAN 1 — ANALISIS BANTAHAN:
+Halangan sebenar di sebalik bantahan ini / Real obstacle behind this objection:
+[analisis 1-2 ayat / 1-2 sentence analysis]
+
+BAHAGIAN 2 — SKRIP RESPONS / RESPONSE SCRIPT:
+VERSI A (Via Teks WA / Via WA Text):
+[respons / response]
+
+VERSI B (Via Percakapan Terus / Via Direct Conversation):
+[respons / response]
+
+PERATURAN / RULES:
+- Akui bantahan dengan empati dahulu / Acknowledge objection with empathy first
+- Jangan defensive / Do not be defensive
+- Jangan kutuk pesaing / Never badmouth competitors
+- Maksimum 4 ayat setiap versi / Maximum 4 sentences each version
+
+INTEGRITY GUARDRAIL (WAJIB / MANDATORY):
+[TESTIMONI] Hanya guna testimoni yang seller sendiri nyatakan.
+Jika tiada, JANGAN cipta atau imply ada.
+Only use testimonials provided by seller. If none, DO NOT create any.
+
+[URGENCY] Hanya guna urgency yang seller sahkan benar.
+Jika tiada, JANGAN tambah "stok terhad" atau seumpamanya.
+Only use urgency confirmed by seller. If none, DO NOT add any.
+
+[KLAIM] Hanya buat klaim berdasarkan maklumat seller.
+JANGAN over-claim atau tambah kelebihan yang tidak disebut.
+Only claim based on seller info. DO NOT over-claim.
+
+[OFFER] Hanya sebut jaminan atau tawaran yang seller nyatakan.
+Jika tiada, JANGAN reka. If none, DO NOT fabricate.
+
+PRINSIP / PRINCIPLE:
+Output yang seller boleh pertahankan kebenarannya kepada pembeli.
+Output the seller can stand behind truthfully.
+
+--- TAMAT PROMPT / END PROMPT ---
+
+================================================================
+SIDEKICK — AI Sales Co-Pilot untuk Seller Malaysia
+================================================================

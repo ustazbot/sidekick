@@ -1,0 +1,93 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CLOSE
+NICHE      : F&B Makanan dan Minuman
+PLATFORM   : Facebook, TikTok, Instagram, Threads, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : fnb, makanan, minuman, food, restoran, katering, gerai, masakan, close
+KEMASKINI  : 05/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller F&B Makanan dan Minuman untuk menutup jualan dengan script closing yang tepat.
+AI akan mengkaji produk dahulu sebelum menulis.
+
+This prompt helps F&B Makanan dan Minuman sellers to close sales with targeted closing scripts.
+AI researches the product first before writing.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+SITUASI CLOSING / CLOSING SITUATION:
+Niche: F&B Makanan dan Minuman
+Produk / Product: [NAMA PRODUK / PRODUCT NAME]
+Situasi / Situation: [FIKIR DULU / TANYA HARGA TERUS SENYAP / INTERESTED TAPI DELAY]
+History conversation: [RINGKASKAN APA YANG DAH BERLAKU / SUMMARIZE WHAT HAPPENED]
+Testimoni sebenar / Real testimonial: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+Jaminan atau offer sebenar / Real guarantee or offer: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+
+STRATEGI IKUT SITUASI / STRATEGY BY SITUATION:
+- Fikir dulu: Cari halangan sebenar dengan soalan lembut sebelum close
+  Find real obstacle with gentle questions before closing
+- Senyap lepas harga: Soft reset dengan nilai baru, bukan tanya balik
+  Soft reset with new value, not following up on price
+- Delay: Kurangkan friction, buat keputusan rasa mudah dan selamat
+  Reduce friction, make decision feel easy and safe
+
+TUGAS / TASK — DUA BAHAGIAN / TWO PARTS:
+
+BAHAGIAN 1 — FLOW GUIDE (Panduan Langkah / Step Guide):
+Langkah 1: [tindakan dan sebab / action and reason]
+Langkah 2: [tindakan dan sebab / action and reason]
+Langkah 3: [tindakan dan sebab / action and reason]
+
+BAHAGIAN 2 — CLOSING SCRIPT:
+VERSI A (Lembut dan Empati / Gentle and Empathetic):
+[script]
+
+VERSI B (Direct dan Confident):
+[script]
+
+PERATURAN / RULES:
+- Maksimum 5 baris setiap script / Maximum 5 lines each script
+- Elak urgency palsu / Avoid fake urgency
+- Closing yang baik buat lead rasa mereka yang buat keputusan
+  Good closing makes lead feel they made the decision themselves
+
+INTEGRITY GUARDRAIL (WAJIB / MANDATORY):
+[TESTIMONI] Hanya guna testimoni yang seller sendiri nyatakan.
+Jika tiada, JANGAN cipta atau imply ada.
+Only use testimonials provided by seller. If none, DO NOT create any.
+
+[URGENCY] Hanya guna urgency yang seller sahkan benar.
+Jika tiada, JANGAN tambah "stok terhad" atau seumpamanya.
+Only use urgency confirmed by seller. If none, DO NOT add any.
+
+[KLAIM] Hanya buat klaim berdasarkan maklumat seller.
+JANGAN over-claim atau tambah kelebihan yang tidak disebut.
+Only claim based on seller info. DO NOT over-claim.
+
+[OFFER] Hanya sebut jaminan atau tawaran yang seller nyatakan.
+Jika tiada, JANGAN reka. If none, DO NOT fabricate.
+
+PRINSIP / PRINCIPLE:
+Output yang seller boleh pertahankan kebenarannya kepada pembeli.
+Output the seller can stand behind truthfully.
+
+--- TAMAT PROMPT / END PROMPT ---
+
+================================================================
+SIDEKICK — AI Sales Co-Pilot untuk Seller Malaysia
+================================================================

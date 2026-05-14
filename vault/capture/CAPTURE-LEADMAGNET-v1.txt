@@ -1,0 +1,61 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : CAPTURE
+NICHE      : Lead Magnet — Idea Tarik Lead Organik
+PLATFORM   : TikTok, Instagram, Facebook, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : lead magnet, capture, organik, free value, lead generation, DM trigger
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+
+Jana 5 IDEA LEAD MAGNET yang akan mendorong "[TARGET PELANGGAN / TARGET CUSTOMER]" untuk DM atau comment secara organik.
+Lead magnet mesti relevan dengan [NAMA PRODUK / PRODUCT NAME] dan menawarkan nilai sebenar — bukan gimmick.
+
+Generate 5 LEAD MAGNET IDEAS that will drive "[TARGET PELANGGAN / TARGET CUSTOMER]" to DM or comment organically.
+Lead magnets must be relevant to [NAMA PRODUK / PRODUCT NAME] and offer real value — not gimmicks.
+
+================================================================
+SPESIFIKASI LEAD MAGNET
+================================================================
+
+Untuk SETIAP idea, berikan:
+
+IDEA [1-5]: [Nama Lead Magnet]
+Format: [PDF / checklist / video / template / mini-kelas / challenge / quiz / lain-lain]
+Tajuk yang menarik: [judul exact yang boleh digunakan dalam post]
+Value proposition (1 ayat): [kenapa target pelanggan MAHU ini]
+CTA dalam post: [ayat exact untuk ajak DM atau comment]
+Platform terbaik: [TikTok / IG / FB / WA Status]
+
+Tulis dalam bahasa yang pelanggan guna sendiri — bukan bahasa marketing formal.
+Write in the language customers use themselves — not formal marketing language.
+
+================================================================
+BONUS — CAPTION PENDEK UNTUK SETIAP LEAD MAGNET
+================================================================
+
+Untuk setiap lead magnet, tulis 1 caption pendek (3-4 ayat) yang:
+- Sentuh pain point pelanggan
+- Offer lead magnet sebagai penyelesaian
+- Ada CTA yang jelas tapi tidak pressure
+
+Guna bahasa perbualan, bukan bahasa jualan.
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis dalam bahasa target pelanggan guna sendiri. Bukan bahasa jualan. Bahasa perbualan.
+- Lead magnet mesti ada nilai sebenar — bukan janji kosong untuk dapatkan contact
+- Spesifik kepada "[TARGET PELANGGAN / TARGET CUSTOMER]" — bukan generik untuk semua orang
+- Elakkan klaim berlebihan atau jaminan yang tidak boleh dibuktikan
+
+--- TAMAT PROMPT / END PROMPT ---

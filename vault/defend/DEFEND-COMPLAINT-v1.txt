@@ -1,0 +1,78 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : DEFEND
+NICHE      : Handle Complaint Dengan Bijak
+PLATFORM   : WhatsApp, DM, Komen, Email
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : complaint, aduan, customer service, de-escalate, refund, trust rebuild
+KEMASKINI  : 12/05/2026
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+Saya seorang seller yang menjual [NAMA PRODUK / PRODUCT NAME].
+Target pelanggan saya: [TARGET PELANGGAN / TARGET CUSTOMER]
+Jenis aduan yang diterima: [JENIS ADUAN / TYPE OF COMPLAINT]
+
+Jana skrip respons untuk handle complaint "[JENIS ADUAN / TYPE OF COMPLAINT]" daripada
+"[TARGET PELANGGAN / TARGET CUSTOMER]" dengan cara yang:
+1. De-escalate situasi tanpa defensif
+2. Pulihkan kepercayaan pelanggan
+3. Buka peluang untuk repeat purchase
+
+Generate response scripts to handle the complaint from the customer in a way that:
+1. De-escalates without being defensive
+2. Rebuilds customer trust
+3. Opens the door for a repeat purchase
+
+================================================================
+BAHAGIAN 1 — ANALISA COMPLAINT
+================================================================
+
+Sebelum bagi skrip, analisa:
+1. Emosi sebenar di sebalik complaint ini (bukan complaint literal, tapi perasaan yang mendorongnya)
+2. Apa yang pelanggan BENAR-BENAR mahukan dari resolution?
+3. Risiko jika tidak dihandle dengan betul (refund, bad review, viral)
+4. Peluang yang ada dalam complaint ini (untuk strengthen relationship)
+
+================================================================
+BAHAGIAN 2 — SKRIP RESPONS
+================================================================
+
+RESPONS 1 — INITIAL REPLY (dalam 24 jam)
+Platform: WhatsApp / DM
+Tujuan: Acknowledge, show empathy, beli masa untuk investigate
+[Skrip penuh — boleh copy-paste]
+
+RESPONS 2 — RESOLUTION MESSAGE
+Platform: WhatsApp / DM
+Tujuan: Bagi penyelesaian konkrit + rebuild trust
+[Skrip penuh — boleh copy-paste]
+Sertakan: Apa yang anda tawarkan sebagai resolution (jika berkaitan)
+
+RESPONS 3 — FOLLOW UP (3-5 hari selepas resolution)
+Platform: WhatsApp
+Tujuan: Check in, tunjukkan ambil berat, buka pintu untuk hubungan seterusnya
+[Skrip penuh — boleh copy-paste]
+
+================================================================
+BAHAGIAN 3 — JIKA DI KOMEN AWAM
+================================================================
+
+Jika complaint ini di komen TikTok / Facebook / IG — tulis:
+- Reply awam (pendek, professional, empathetic)
+- Follow-up ajak ke DM (private resolution)
+
+================================================================
+PERATURAN / RULES
+================================================================
+
+- Gunakan bahasa manusia sebenar. Elakkan ayat formal atau gaya artikel.
+  Tulis seperti manusia yang genuinely ambil berat — bukan template korporat.
+- Tiada defensif, tiada menyalahkan balik pelanggan
+- Resolution mesti realistic — jangan janji yang tidak boleh ditepati
+- Matlamat akhir: pelanggan rasa dihargai dan berpotensi beli lagi
+
+--- TAMAT PROMPT / END PROMPT ---

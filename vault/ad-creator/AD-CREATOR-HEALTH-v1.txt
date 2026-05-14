@@ -1,0 +1,94 @@
+================================================================
+SIDEKICK VAULT — FAIL PROMPT RASMI
+================================================================
+MODUL      : AD-CREATOR
+NICHE      : Health dan Supplement
+PLATFORM   : Facebook, TikTok, Instagram, Threads, WhatsApp
+VERSI      : v1.0
+BAHASA     : Dwibahasa (Melayu + Inggeris)
+TAGS       : health, supplement, kesihatan, vitamin, herba, halal, wellness, ad-creator
+KEMASKINI  : 05/05/2026
+================================================================
+
+PENERANGAN / DESCRIPTION:
+Prompt ini membantu seller Health dan Supplement untuk menghasilkan prompt untuk edit gambar menjadi iklan.
+AI akan mengkaji produk dahulu sebelum menulis.
+
+This prompt helps Health dan Supplement sellers to generate prompts to turn images into ads.
+AI researches the product first before writing.
+
+================================================================
+CARA GUNA / HOW TO USE:
+1. Salin keseluruhan prompt di bawah
+   Copy the full prompt below
+2. Buka AI pilihan anda (ChatGPT, Claude, DeepSeek)
+   Open your preferred AI
+3. Tampal prompt dan isi bahagian [DALAM KURUNGAN]
+   Paste prompt and fill in [BRACKETED] sections
+4. Hantar dan dapatkan output / Send and get your output
+================================================================
+
+--- MULA PROMPT / START PROMPT ---
+
+NOTA PENTING / IMPORTANT NOTE:
+Prompt ini adalah untuk digunakan dengan ChatGPT-4o bersama gambar produk anda.
+This prompt is to be used with ChatGPT-4o together with your product image.
+
+ARAHAN UNTUK CHATGPT-4O / INSTRUCTIONS FOR CHATGPT-4O:
+Saya akan lampirkan gambar produk. Hasilkan gambar baru yang lebih menarik
+untuk content iklan organik di [FACEBOOK / INSTAGRAM / TIKTOK / THREADS].
+I will attach a product image. Generate a new, more attractive image
+for organic ad content on [FACEBOOK / INSTAGRAM / TIKTOK / THREADS].
+
+MAKLUMAT PRODUK / PRODUCT INFO:
+Niche: Health dan Supplement
+Produk / Product: [NAMA PRODUK / PRODUCT NAME]
+Gaya visual / Visual style: [BERSIH DAN MINIMALIS / LIFESTYLE DAN HANGAT / BERANI DAN MENYERLAH / PREMIUM DAN EKSKLUSIF]
+Warna jenama / Brand colors: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN UNTUK AI PILIH]
+
+TEKS OVERLAY UNTUK DIMASUKKAN KE DALAM GAMBAR:
+TEXT OVERLAY TO INSERT INTO IMAGE:
+Hook (teks paling besar / largest text): [TULIS HOOK / WRITE HOOK — ATAU BIAR AI CADANGKAN / OR LET AI SUGGEST]
+CTA (teks kecil bawah / small text bottom): [TULIS CTA / WRITE CTA — ATAU BIAR AI CADANGKAN / OR LET AI SUGGEST]
+Badge tawaran / Offer badge: [ISI JIKA ADA / FILL IF AVAILABLE — KOSONGKAN JIKA TIADA]
+
+ARAHAN EDITING / EDITING INSTRUCTIONS:
+1. Kekalkan produk dari gambar asal / Keep product from original image
+2. Tingkatkan pencahayaan dan ketajaman / Improve lighting and sharpness
+3. Bersihkan atau tingkatkan latar belakang / Clean or enhance background
+4. Masukkan teks overlay dengan kontras yang jelas / Add text overlay with clear contrast
+5. Hasilkan gambar yang nampak natural, bukan terlalu iklan
+   Generate image that looks natural, not too ad-like
+
+PERATURAN / RULES:
+- Jangan tambah teks "TERBUKTI", "NO.1", "BEST SELLER" jika tidak dinyatakan
+  Do not add "PROVEN", "NO.1", "BEST SELLER" if not specified
+- Jangan tambah klaim yang tidak dinyatakan / Do not add unspecified claims
+- Semua teks mesti berdasarkan maklumat yang diberikan
+  All text must be based on information provided
+
+INTEGRITY GUARDRAIL (WAJIB / MANDATORY):
+[TESTIMONI] Hanya guna testimoni yang seller sendiri nyatakan.
+Jika tiada, JANGAN cipta atau imply ada.
+Only use testimonials provided by seller. If none, DO NOT create any.
+
+[URGENCY] Hanya guna urgency yang seller sahkan benar.
+Jika tiada, JANGAN tambah "stok terhad" atau seumpamanya.
+Only use urgency confirmed by seller. If none, DO NOT add any.
+
+[KLAIM] Hanya buat klaim berdasarkan maklumat seller.
+JANGAN over-claim atau tambah kelebihan yang tidak disebut.
+Only claim based on seller info. DO NOT over-claim.
+
+[OFFER] Hanya sebut jaminan atau tawaran yang seller nyatakan.
+Jika tiada, JANGAN reka. If none, DO NOT fabricate.
+
+PRINSIP / PRINCIPLE:
+Output yang seller boleh pertahankan kebenarannya kepada pembeli.
+Output the seller can stand behind truthfully.
+
+--- TAMAT PROMPT / END PROMPT ---
+
+================================================================
+SIDEKICK — AI Sales Co-Pilot untuk Seller Malaysia
+================================================================

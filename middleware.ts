@@ -6,6 +6,11 @@ const ADMIN_EMAILS = (process.env.ADMIN_EMAILS ?? 'planetrizq@gmail.com')
   .map(e => e.trim().toLowerCase())
 
 export async function middleware(request: NextRequest) {
+  // Fail-safe: if Supabase env vars missing, let request through unguarded
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY) {
+    return NextResponse.next()
+  }
+
   const { supabase, supabaseResponse } = await createClient(request)
   const { data: { user } } = await supabase.auth.getUser()
 

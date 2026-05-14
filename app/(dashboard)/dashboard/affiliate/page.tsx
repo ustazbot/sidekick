@@ -35,7 +35,7 @@ export default async function AffiliatePage() {
       .eq('affiliate_id', raw.id)
       .order('paid_at', { ascending: false })
       .limit(20)
-    payouts = ((payoutsData ?? []) as any[]).map(r => ({
+    payouts = ((payoutsData ?? []) as PayoutRecord[]).map(r => ({
       ...r,
       amount: Number(r.amount),
     }))

@@ -11,7 +11,7 @@ function generateFallbackCode(userId: string): string {
   return userId.replace(/-/g, '').slice(0, 10)
 }
 
-export async function POST(_request: Request) {
+export async function POST() {
   const supabase = createClient()
   const { data: { user } } = await supabase.auth.getUser()
 

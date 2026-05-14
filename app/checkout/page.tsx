@@ -1,13 +1,11 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
-import { useRouter } from 'next/navigation'
 import Image from 'next/image'
 
 type Status = 'idle' | 'loading' | 'error'
 
 export default function CheckoutPage() {
-  const router = useRouter()
   const [name,  setName]  = useState('')
   const [email, setEmail] = useState('')
   const [phone, setPhone] = useState('')

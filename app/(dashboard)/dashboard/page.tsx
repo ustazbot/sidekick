@@ -10,11 +10,11 @@ export default async function DashboardPage() {
 
   const { data: profile } = await supabase
     .from('users')
-    .select('full_name')
+    .select('name')
     .eq('id', user!.id)
-    .single()
+    .maybeSingle()
 
-  const userName = profile?.full_name ?? user?.email?.split('@')[0] ?? 'Pengguna'
+  const userName = profile?.name ?? user?.email?.split('@')[0] ?? 'Pengguna'
   const files = getAllFiles()
 
   return <BrowseClient files={files} userName={userName} />

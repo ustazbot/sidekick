@@ -1,8 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { createClient } from '@/lib/supabase/client'
+import Image from 'next/image'
 
 const NICHES = [
   { code: 'REN', label: 'Hartanah / Ejen Hartanah' },
@@ -24,7 +24,6 @@ export default function OnboardingPage() {
   const [status, setStatus] = useState<Status>('idle')
   const [message, setMessage] = useState('')
   const router = useRouter()
-  const supabase = useMemo(() => createClient(), [])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -34,20 +33,25 @@ export default function OnboardingPage() {
       return
     }
     setStatus('loading')
-    const { data: { user } } = await supabase.auth.getUser()
-    if (!user) {
-      router.push('/')
-      return
-    }
-    const { error } = await supabase
-      .from('users')
-      .update({ niche, onboarded: true })
-      .eq('id', user.id)
-    if (error) {
+
+    try {
+      const res = await fetch('/api/onboarding', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ niche }),
+      })
+      const data = await res.json()
+      if (!res.ok) {
+        setStatus('error')
+        setMessage(data.error ?? 'Ralat menyimpan maklumat. Cuba lagi.')
+        return
+      }
+    } catch {
       setStatus('error')
-      setMessage('Ralat menyimpan maklumat. Cuba lagi.')
+      setMessage('Tiada sambungan. Sila cuba lagi.')
       return
     }
+
     router.push('/dashboard')
     router.refresh()
   }
@@ -55,6 +59,9 @@ export default function OnboardingPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-bg px-4">
       <div className="w-full max-w-sm">
+        <div className="flex justify-center mb-4">
+          <Image src="/logo.png" alt="SideKick" width={140} height={56} style={{ objectFit: 'contain' }} priority />
+        </div>
         <h1 className="text-2xl font-bold text-center mb-1 font-syne">
           Selamat Datang!
         </h1>
@@ -94,6 +101,15 @@ export default function OnboardingPage() {
             style={{ background: 'var(--accent)' }}
           >
             {status === 'loading' ? 'Menyimpan...' : 'Teruskan ke Dashboard'}
+          </button>
+
+          <button
+            type="button"
+            onClick={() => router.push('/dashboard')}
+            className="w-full text-center text-sm py-2"
+            style={{ color: 'var(--text-3)' }}
+          >
+            Langkau buat masa ini
           </button>
         </form>
       </div>

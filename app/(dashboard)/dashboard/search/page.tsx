@@ -36,7 +36,7 @@ export default function SearchPage() {
   return (
     <div className="px-[15px] pt-[18px] pb-[108px]">
       <div className="mb-[18px]">
-        <h1 className="font-syne text-[20px] font-bold tracking-[-0.4px] mb-1">Cari Prompt</h1>
+        <h1 className="font-syne text-[22px] font-bold tracking-[-0.5px] mb-1">Cari Prompt</h1>
         <p className="text-[12px]" style={{ color: 'var(--text-3)' }}>
           Cari menggunakan bahasa natural
         </p>
@@ -53,12 +53,10 @@ export default function SearchPage() {
           placeholder="Contoh: cara balas komen negatif di Facebook"
           className="w-full rounded-full pl-[44px] pr-[18px] py-[12px] text-sm outline-none"
           style={{
-            background: 'var(--glass)',
-            backdropFilter: 'blur(16px)',
-            WebkitBackdropFilter: 'blur(16px)',
-            border: '1px solid var(--glass-border)',
-            boxShadow: 'var(--shadow-sm)',
-            color: 'var(--text)',
+            background: 'var(--card)',
+            border:     '1px solid var(--card-border)',
+            boxShadow:  'var(--shadow-xs)',
+            color:      'var(--text)',
           }}
         />
       </form>

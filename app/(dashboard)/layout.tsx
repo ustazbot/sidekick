@@ -1,7 +1,10 @@
 import { redirect } from 'next/navigation'
 import { createClient } from '@/lib/supabase/server'
 import BottomNav from '@/components/ui/BottomNav'
+import SidebarNav from '@/components/ui/SidebarNav'
 import HelpDesk from '@/components/ui/HelpDesk'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default async function DashboardLayout({
   children,
@@ -17,62 +20,75 @@ export default async function DashboardLayout({
   const initials = (user.email ?? 'U').slice(0, 1).toUpperCase()
 
   return (
-    <div className="relative min-h-screen bg-bg">
-      {/* Ambient blobs */}
-      <div
-        aria-hidden="true"
-        className="fixed rounded-full pointer-events-none z-0"
-        style={{
-          width: 320,
-          height: 320,
-          top: -80,
-          right: -80,
-          background: 'radial-gradient(circle, rgba(29,158,117,0.10), transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
-      <div
-        aria-hidden="true"
-        className="fixed rounded-full pointer-events-none z-0"
-        style={{
-          width: 260,
-          height: 260,
-          bottom: 120,
-          left: -80,
-          background: 'radial-gradient(circle, rgba(29,158,117,0.07), transparent 70%)',
-          filter: 'blur(60px)',
-        }}
-      />
+    <div className="relative min-h-screen" style={{ background: 'var(--bg)' }}>
 
-      {/* Sticky header */}
-      <header
-        className="sticky top-0 z-50 px-[18px] py-[13px] flex items-center justify-between"
+      {/* ── Desktop Sidebar (md+) ─────────────────── */}
+      <aside
+        className="hidden md:flex fixed left-0 top-0 h-full w-[220px] flex-col z-40"
         style={{
-          background: 'rgba(242,242,247,0.85)',
-          backdropFilter: 'blur(24px)',
-          WebkitBackdropFilter: 'blur(24px)',
-          borderBottom: '1px solid rgba(0,0,0,0.05)',
+          background:   'var(--sidebar)',
+          borderRight:  '1px solid rgba(255,255,255,0.05)',
         }}
       >
-        <span className="font-syne font-extrabold text-[17px] tracking-[-0.3px] text-text">
-          SIDE<span style={{ color: 'var(--accent)' }}>KICK</span>
-        </span>
-        <div
-          className="w-[33px] h-[33px] rounded-full flex items-center justify-center text-[11px] font-bold font-syne"
+        <div className="px-5 pt-8 pb-6">
+          <Link href="/dashboard">
+            <Image
+              src="/logo.png"
+              alt="SideKick"
+              width={120}
+              height={48}
+              style={{ objectFit: 'contain' }}
+              priority
+            />
+          </Link>
+        </div>
+        <SidebarNav initials={initials} />
+      </aside>
+
+      {/* ── Mobile Header ─────────────────────────── */}
+      <header
+        className="md:hidden sticky top-0 z-50 px-[18px] py-[13px] flex items-center justify-center relative"
+        style={{
+          background:          'rgba(250,249,246,0.90)',
+          backdropFilter:      'blur(24px)',
+          WebkitBackdropFilter:'blur(24px)',
+          borderBottom:        '1px solid rgba(0,0,0,0.06)',
+        }}
+      >
+        <Link href="/dashboard">
+          <Image
+            src="/logo.png"
+            alt="SideKick"
+            width={140}
+            height={56}
+            style={{ objectFit: 'contain' }}
+            priority
+          />
+        </Link>
+        <Link
+          href="/dashboard/profile"
+          className="absolute right-[18px] w-[33px] h-[33px] rounded-full flex items-center justify-center text-[11px] font-bold font-syne"
           style={{
             background: 'var(--accent-light)',
-            border: '1.5px solid var(--accent-border)',
-            color: 'var(--accent)',
-            boxShadow: 'var(--shadow-sm)',
+            border:     '1.5px solid var(--accent-border)',
+            color:      'var(--accent)',
+            boxShadow:  'var(--shadow-sm)',
           }}
         >
           {initials}
-        </div>
+        </Link>
       </header>
 
-      <main className="relative z-10">{children}</main>
+      {/* ── Main content ──────────────────────────── */}
+      <main className="relative z-10 md:ml-[220px]">
+        {children}
+      </main>
 
-      <BottomNav />
+      {/* ── Mobile Bottom Nav ─────────────────────── */}
+      <div className="md:hidden">
+        <BottomNav />
+      </div>
+
       <HelpDesk />
     </div>
   )

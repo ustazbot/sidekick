@@ -9,8 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-dm-sans)', 'DM Sans', 'sans-serif'],
-        syne: ['var(--font-syne)', 'Syne', 'sans-serif'],
+        sans: ['var(--font-jakarta)', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+        syne: ['var(--font-jakarta)', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
       },
       colors: {
         accent: 'var(--accent)',

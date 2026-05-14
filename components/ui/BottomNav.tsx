@@ -18,7 +18,7 @@ export default function BottomNav() {
       aria-label="Navigasi utama"
       className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[430px] flex justify-around px-2 pt-2 pb-6 z-50"
       style={{
-        background: 'rgba(255,255,255,0.90)',
+        background: 'rgba(250,249,246,0.92)',
         backdropFilter: 'blur(28px)',
         WebkitBackdropFilter: 'blur(28px)',
         borderTop: '1px solid rgba(0,0,0,0.05)',
@@ -35,7 +35,8 @@ export default function BottomNav() {
             key={tab.href}
             href={tab.href}
             aria-current={active ? 'page' : undefined}
-            className="flex flex-col items-center gap-1 px-5 py-1 rounded-md"
+            className="flex flex-col items-center gap-1 px-5 py-1 rounded-[10px] transition-colors"
+            style={active ? { background: 'var(--accent-light)' } : {}}
           >
             <span
               aria-hidden="true"

@@ -2,19 +2,15 @@ import { render, screen, waitFor } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import LoginPage from '@/app/(auth)/login/page'
 
-const mockSignInWithOtp = jest.fn()
 const mockSignInWithPassword = jest.fn()
 
 jest.mock('@/lib/supabase/client', () => ({
   createClient: () => ({
-    auth: {
-      signInWithOtp: mockSignInWithOtp,
-      signInWithPassword: mockSignInWithPassword,
-    },
+    auth: { signInWithPassword: mockSignInWithPassword },
   }),
 }))
 
-const mockPush = jest.fn()
+const mockPush    = jest.fn()
 const mockRefresh = jest.fn()
 
 jest.mock('next/navigation', () => ({
@@ -24,52 +20,11 @@ jest.mock('next/navigation', () => ({
 describe('LoginPage', () => {
   beforeEach(() => jest.clearAllMocks())
 
-  it('renders email field and magic link button by default', () => {
+  it('renders email and password fields with Log Masuk button', () => {
     render(<LoginPage />)
     expect(screen.getByLabelText('Email')).toBeInTheDocument()
-    expect(screen.getByRole('button', { name: /Hantar Magic Link/i })).toBeInTheDocument()
-    expect(screen.queryByLabelText('Kata Laluan')).not.toBeInTheDocument()
-  })
-
-  it('reveals password field when "Guna kata laluan" is clicked', async () => {
-    const user = userEvent.setup()
-    render(<LoginPage />)
-    await user.click(screen.getByText(/Guna kata laluan/i))
     expect(screen.getByLabelText('Kata Laluan')).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /^Log Masuk$/i })).toBeInTheDocument()
-  })
-
-  it('sends magic link and shows BM success message', async () => {
-    mockSignInWithOtp.mockResolvedValue({ error: null })
-    const user = userEvent.setup()
-    render(<LoginPage />)
-
-    await user.type(screen.getByLabelText('Email'), 'user@test.com')
-    await user.click(screen.getByRole('button', { name: /Hantar Magic Link/i }))
-
-    await waitFor(() => {
-      expect(screen.getByText(/Semak email anda/i)).toBeInTheDocument()
-    })
-    expect(mockSignInWithOtp).toHaveBeenCalledWith({
-      email: 'user@test.com',
-      options: {
-        shouldCreateUser: true,
-        emailRedirectTo: expect.stringContaining('/auth/callback'),
-      },
-    })
-  })
-
-  it('shows BM error when magic link fails', async () => {
-    mockSignInWithOtp.mockResolvedValue({ error: { message: 'User not found' } })
-    const user = userEvent.setup()
-    render(<LoginPage />)
-
-    await user.type(screen.getByLabelText('Email'), 'ghost@test.com')
-    await user.click(screen.getByRole('button', { name: /Hantar Magic Link/i }))
-
-    await waitFor(() => {
-      expect(screen.getByText(/Ralat menghantar magic link/i)).toBeInTheDocument()
-    })
   })
 
   it('logs in with password and redirects to /dashboard', async () => {
@@ -77,7 +32,6 @@ describe('LoginPage', () => {
     const user = userEvent.setup()
     render(<LoginPage />)
 
-    await user.click(screen.getByText(/Guna kata laluan/i))
     await user.type(screen.getByLabelText('Email'), 'user@test.com')
     await user.type(screen.getByLabelText('Kata Laluan'), 'secret123')
     await user.click(screen.getByRole('button', { name: /^Log Masuk$/i }))
@@ -86,14 +40,17 @@ describe('LoginPage', () => {
       expect(mockPush).toHaveBeenCalledWith('/dashboard')
       expect(mockRefresh).toHaveBeenCalledTimes(1)
     })
+    expect(mockSignInWithPassword).toHaveBeenCalledWith({
+      email: 'user@test.com',
+      password: 'secret123',
+    })
   })
 
-  it('shows BM error on wrong password', async () => {
+  it('shows error on wrong credentials', async () => {
     mockSignInWithPassword.mockResolvedValue({ error: { message: 'Invalid login credentials' } })
     const user = userEvent.setup()
     render(<LoginPage />)
 
-    await user.click(screen.getByText(/Guna kata laluan/i))
     await user.type(screen.getByLabelText('Email'), 'user@test.com')
     await user.type(screen.getByLabelText('Kata Laluan'), 'wrongpassword')
     await user.click(screen.getByRole('button', { name: /^Log Masuk$/i }))
@@ -101,5 +58,10 @@ describe('LoginPage', () => {
     await waitFor(() => {
       expect(screen.getByText(/Email atau kata laluan tidak sah/i)).toBeInTheDocument()
     })
+  })
+
+  it('shows link to checkout for new users', () => {
+    render(<LoginPage />)
+    expect(screen.getByText(/Beli SIDEKICK/i)).toBeInTheDocument()
   })
 })

@@ -18,23 +18,19 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'invalid_payload' }, { status: 400 })
   }
 
-  const siteUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
   const adminSupabase = createAdminClient()
 
-  const { data: inviteData, error: inviteError } = await adminSupabase.auth.admin.inviteUserByEmail(email, {
-    redirectTo: `${siteUrl}/auth/callback`,
-  })
-
-  if (inviteError) {
-    console.error('[webhook] invite failed:', inviteError.message)
-  }
-
-  const userId = inviteData?.user?.id ?? null
+  // Look up user by email (created during checkout)
+  const { data: user } = await adminSupabase
+    .from('users')
+    .select('id')
+    .eq('email', email)
+    .maybeSingle()
 
   const { error: purchaseError } = await adminSupabase
     .from('purchases')
     .insert({
-      user_id: userId,
+      user_id: user?.id ?? null,
       email,
       amount: parseFloat(amountStr),
       toyyibpay_ref: billCode,

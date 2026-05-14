@@ -16,18 +16,23 @@ function makeRequest(fields: Record<string, string>) {
   })
 }
 
-function makeAdminClient(options: { inviteError?: boolean; insertError?: boolean }) {
+function makeAdminClient(options: { userFound?: boolean; insertError?: boolean } = {}) {
   const insertMock = jest.fn().mockResolvedValue({
     error: options.insertError ? { message: 'insert failed' } : null,
   })
-  const fromMock = jest.fn().mockReturnValue({ insert: insertMock })
-  const inviteMock = jest.fn().mockResolvedValue({
-    data: options.inviteError ? null : { user: { id: 'new-user-id' } },
-    error: options.inviteError ? { message: 'already registered' } : null,
+  const maybeSingleMock = jest.fn().mockResolvedValue({
+    data: options.userFound ? { id: 'found-user-id' } : null,
+    error: null,
   })
   return {
-    auth: { admin: { inviteUserByEmail: inviteMock } },
-    from: fromMock,
+    from: jest.fn((table: string) => {
+      if (table === 'users') {
+        return { select: jest.fn().mockReturnValue({ eq: jest.fn().mockReturnValue({ maybeSingle: maybeSingleMock }) }) }
+      }
+      return { insert: insertMock }
+    }),
+    _insertMock: insertMock,
+    _maybeSingleMock: maybeSingleMock,
   }
 }
 
@@ -48,8 +53,8 @@ describe('POST /api/webhook/toyyibpay', () => {
     expect(mockCreateAdminClient).not.toHaveBeenCalled()
   })
 
-  it('invites user and creates purchase for successful payment (status 1)', async () => {
-    const adminClient = makeAdminClient({})
+  it('looks up user and creates purchase for successful payment (status 1)', async () => {
+    const adminClient = makeAdminClient({ userFound: true })
     mockCreateAdminClient.mockReturnValue(adminClient as any)
     const req = makeRequest({
       billCode: 'BILL123',
@@ -59,13 +64,24 @@ describe('POST /api/webhook/toyyibpay', () => {
     })
     const res = await POST(req)
     expect(res.status).toBe(200)
-    expect(adminClient.auth.admin.inviteUserByEmail).toHaveBeenCalledWith(
-      'buyer@test.com',
-      expect.objectContaining({ redirectTo: expect.stringContaining('/auth/callback') })
-    )
+    expect(adminClient.from).toHaveBeenCalledWith('users')
     expect(adminClient.from).toHaveBeenCalledWith('purchases')
-    expect(adminClient.from('purchases').insert).toHaveBeenCalledWith(
+  })
+
+  it('inserts purchase with null user_id when user not found', async () => {
+    const adminClient = makeAdminClient({ userFound: false })
+    mockCreateAdminClient.mockReturnValue(adminClient as any)
+    const req = makeRequest({
+      billCode: 'BILL123',
+      billpaymentStatus: '1',
+      billExternalReferenceNo: 'buyer@test.com',
+      billpaymentAmount: '97.00',
+    })
+    const res = await POST(req)
+    expect(res.status).toBe(200)
+    expect(adminClient._insertMock).toHaveBeenCalledWith(
       expect.objectContaining({
+        user_id: null,
         email: 'buyer@test.com',
         amount: 97,
         toyyibpay_ref: 'BILL123',

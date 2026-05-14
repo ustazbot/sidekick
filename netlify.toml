@@ -10,3 +10,6 @@
 
 [functions]
   node_bundler = "nft"
+
+[functions."___netlify-server-handler"]
+  included_files = ["vault/**/*"]

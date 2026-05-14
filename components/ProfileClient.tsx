@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 import { createClient } from '@/lib/supabase/client'
 
 const NICHES = [
@@ -46,6 +47,7 @@ function parseBankInfo(raw: string) {
 export default function ProfileClient({
   email, initialName, initialNiche, joined, isAffiliate, initialBankInfo,
 }: Props) {
+  const router = useRouter()
   const [isEditing, setIsEditing] = useState(false)
   const [displayName,  setDisplayName]  = useState(initialName)
   const [displayNiche, setDisplayNiche] = useState(initialNiche)
@@ -308,6 +310,19 @@ export default function ProfileClient({
           {pwSaving ? 'Menyimpan…' : 'Kemaskini Kata Laluan'}
         </button>
       </div>
+
+      {/* ── Log Keluar ── */}
+      <button
+        onClick={async () => {
+          const supabase = createClient()
+          await supabase.auth.signOut()
+          router.push('/')
+        }}
+        className="w-full rounded-[12px] py-[11px] text-[13px] font-semibold mt-[4px]"
+        style={{ background: 'rgba(217,79,79,0.08)', color: 'var(--danger)', border: '1px solid rgba(217,79,79,0.18)' }}
+      >
+        Log Keluar
+      </button>
     </div>
   )
 }

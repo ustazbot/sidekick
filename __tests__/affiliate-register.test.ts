@@ -56,7 +56,7 @@ describe('POST /api/affiliate/register', () => {
 
   it('returns 401 when user is not authenticated', async () => {
     mockCreateClient.mockReturnValue(makeServerClient(null) as any)
-    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
+    const res = await POST()
     expect(res.status).toBe(401)
   })
 
@@ -65,7 +65,7 @@ describe('POST /api/affiliate/register', () => {
     mockCreateAdminClient.mockReturnValue(
       makeAdminClient({ existing: { id: 'aff-1', affiliate_code: 'existingref' } }) as any
     )
-    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
+    const res = await POST()
     expect(res.status).toBe(409)
     const body = await res.json()
     expect(body.ref_code).toBe('existingref')
@@ -91,7 +91,7 @@ describe('POST /api/affiliate/register', () => {
     }
     mockCreateAdminClient.mockReturnValue(adminClient as any)
 
-    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
+    const res = await POST()
     expect(res.status).toBe(201)
     const body = await res.json()
     expect(body.ref_code).toBeDefined()

@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server'
+import { createHmac } from 'crypto'
 import { createAdminClient } from '@/lib/supabase/admin'
 
 const TOYYIBPAY_URL = 'https://toyyibpay.com'
@@ -62,7 +63,12 @@ export async function POST(request: Request) {
     billPriceSetting:        '1',
     billPayorInfo:           '1',
     billAmount:              String(PRICE_CENTS),
-    billReturnUrl:           `${appUrl}/payment/success?email=${encodeURIComponent(email)}`,
+    billReturnUrl:           (() => {
+      const ts     = String(Date.now())
+      const secret = process.env.SUPABASE_SERVICE_ROLE_KEY ?? ''
+      const token  = createHmac('sha256', secret).update(`${email}:${ts}`).digest('hex')
+      return `${appUrl}/payment/success?email=${encodeURIComponent(email)}&token=${token}&ts=${ts}`
+    })(),
     billCallbackUrl:         `${appUrl}/api/webhook/toyyibpay`,
     billExternalReferenceNo: email,
     billTo:                  name,

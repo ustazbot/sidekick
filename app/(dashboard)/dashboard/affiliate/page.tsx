@@ -41,7 +41,7 @@ export default async function AffiliatePage() {
     }))
   }
 
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://sidekick.my'
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://sidekick101.com'
 
   return (
     <AffiliateClient

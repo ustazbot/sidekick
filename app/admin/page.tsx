@@ -128,7 +128,7 @@ export default async function AdminPage() {
   }
 
   const stats = await getStats()
-  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://sidekick.my'
+  const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'https://sidekick101.com'
 
   const fmt = (n: number) => `RM${n.toFixed(2)}`
   const fmtDate = (d: string | null) =>

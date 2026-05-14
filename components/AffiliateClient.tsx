@@ -19,7 +19,7 @@ type Props = {
   payouts?: PayoutRecord[]
 }
 
-export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://sidekick.my', payouts = [] }: Props) {
+export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://sidekick101.com', payouts = [] }: Props) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const [registeredRef, setRegisteredRef] = useState<string | null>(null)

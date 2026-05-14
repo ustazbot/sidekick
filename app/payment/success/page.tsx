@@ -5,7 +5,7 @@ import { useSearchParams, useRouter } from 'next/navigation'
 import Image from 'next/image'
 import { createClient } from '@/lib/supabase/client'
 
-function SetPasswordForm({ email }: { email: string }) {
+function SetPasswordForm({ email, token, ts }: { email: string; token: string; ts: string }) {
   const [password, setPassword] = useState('')
   const [confirm,  setConfirm]  = useState('')
   const [status,   setStatus]   = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
@@ -30,7 +30,7 @@ function SetPasswordForm({ email }: { email: string }) {
     const res = await fetch('/api/auth/set-password', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ email, password }),
+      body:    JSON.stringify({ email, password, token, ts }),
     })
 
     if (!res.ok) {
@@ -103,6 +103,8 @@ function SetPasswordForm({ email }: { email: string }) {
 function SuccessContent() {
   const searchParams = useSearchParams()
   const email = searchParams.get('email') ?? ''
+  const token = searchParams.get('token') ?? ''
+  const ts    = searchParams.get('ts')    ?? ''
 
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
@@ -121,8 +123,8 @@ function SuccessContent() {
           <p className="text-gray-600 text-sm">Terima kasih kerana menyertai SIDEKICK.</p>
         </div>
 
-        {email ? (
-          <SetPasswordForm email={email} />
+        {email && token ? (
+          <SetPasswordForm email={email} token={token} ts={ts} />
         ) : (
           <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mt-6">
             <p className="text-sm text-blue-800 font-semibold mb-1">Langkah seterusnya:</p>

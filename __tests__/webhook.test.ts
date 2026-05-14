@@ -69,7 +69,7 @@ describe('POST /api/webhook/toyyibpay', () => {
         email: 'buyer@test.com',
         amount: 97,
         toyyibpay_ref: 'BILL123',
-        status: 'paid',
+        status: 'success',
       })
     )
   })

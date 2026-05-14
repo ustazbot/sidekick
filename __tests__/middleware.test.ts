@@ -25,20 +25,20 @@ describe('middleware', () => {
   beforeEach(() => jest.clearAllMocks())
 
   describe('unauthenticated user', () => {
-    it('redirects /dashboard to /', async () => {
+    it('redirects /dashboard to /login', async () => {
       const req = makeRequest('/dashboard')
       mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
       const res = await middleware(req)
       expect(res.status).toBe(307)
-      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+      expect(res.headers.get('location')).toBe('http://localhost:3000/login')
     })
 
-    it('redirects /dashboard/browse to /', async () => {
+    it('redirects /dashboard/browse to /login', async () => {
       const req = makeRequest('/dashboard/browse')
       mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
       const res = await middleware(req)
       expect(res.status).toBe(307)
-      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+      expect(res.headers.get('location')).toBe('http://localhost:3000/login')
     })
 
     it('passes /login through without redirect', async () => {
@@ -73,20 +73,20 @@ describe('middleware', () => {
   })
 
   describe('admin routes', () => {
-    it('redirects unauthenticated user from /admin to /', async () => {
+    it('redirects unauthenticated user from /admin to /login', async () => {
       const req = makeRequest('/admin')
       mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
       const res = await middleware(req)
       expect(res.status).toBe(307)
-      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+      expect(res.headers.get('location')).toBe('http://localhost:3000/login')
     })
 
-    it('redirects unauthenticated user from /admin/users to /', async () => {
+    it('redirects unauthenticated user from /admin/users to /login', async () => {
       const req = makeRequest('/admin/users')
       mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
       const res = await middleware(req)
       expect(res.status).toBe(307)
-      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+      expect(res.headers.get('location')).toBe('http://localhost:3000/login')
     })
 
     it('redirects non-admin user from /admin to /dashboard', async () => {
@@ -109,7 +109,7 @@ describe('middleware', () => {
 
     it('allows admin user through to /admin', async () => {
       const req = makeRequest('/admin')
-      const adminUser = { id: 'admin-123', email: 'admin@test.com', app_metadata: { role: 'admin' } }
+      const adminUser = { id: 'admin-123', email: 'planetrizq@gmail.com', app_metadata: {} }
       const clientResult = mockClient(req, adminUser)
       mockCreateClient.mockResolvedValue(clientResult as any)
       const res = await middleware(req)
@@ -119,7 +119,7 @@ describe('middleware', () => {
 
     it('allows admin user through to /admin/users', async () => {
       const req = makeRequest('/admin/users')
-      const adminUser = { id: 'admin-123', email: 'admin@test.com', app_metadata: { role: 'admin' } }
+      const adminUser = { id: 'admin-123', email: 'planetrizq@gmail.com', app_metadata: {} }
       const clientResult = mockClient(req, adminUser)
       mockCreateClient.mockResolvedValue(clientResult as any)
       const res = await middleware(req)
@@ -129,12 +129,12 @@ describe('middleware', () => {
   })
 
   describe('onboarding routes', () => {
-    it('redirects unauthenticated user from /onboarding to /', async () => {
+    it('redirects unauthenticated user from /onboarding to /login', async () => {
       const req = makeRequest('/onboarding')
       mockCreateClient.mockResolvedValue(mockClient(req, null) as any)
       const res = await middleware(req)
       expect(res.status).toBe(307)
-      expect(res.headers.get('location')).toBe('http://localhost:3000/')
+      expect(res.headers.get('location')).toBe('http://localhost:3000/login')
     })
 
     it('allows authenticated user through to /onboarding', async () => {

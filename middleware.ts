@@ -1,29 +1,27 @@
 import { type NextRequest, NextResponse } from 'next/server'
 import { createClient } from '@/lib/supabase/middleware'
 
+const ADMIN_EMAILS = (process.env.ADMIN_EMAILS ?? 'planetrizq@gmail.com')
+  .split(',')
+  .map(e => e.trim().toLowerCase())
+
 export async function middleware(request: NextRequest) {
   const { supabase, supabaseResponse } = await createClient(request)
   const { data: { user } } = await supabase.auth.getUser()
 
   const { pathname } = request.nextUrl
+  const loginUrl = new URL('/login', request.url)
 
   if (pathname.startsWith('/admin')) {
-    if (!user) {
-      return NextResponse.redirect(new URL('/', request.url))
-    }
-    const role = (user.app_metadata as Record<string, unknown>)?.role
-    if (typeof role !== 'string' || role !== 'admin') {
+    if (!user) return NextResponse.redirect(loginUrl)
+    if (!ADMIN_EMAILS.includes(user.email?.toLowerCase() ?? '')) {
       return NextResponse.redirect(new URL('/dashboard', request.url))
     }
     return supabaseResponse
   }
 
-  if (pathname.startsWith('/onboarding') && !user) {
-    return NextResponse.redirect(new URL('/', request.url))
-  }
-
-  if (pathname.startsWith('/dashboard') && !user) {
-    return NextResponse.redirect(new URL('/', request.url))
+  if ((pathname.startsWith('/dashboard') || pathname.startsWith('/onboarding')) && !user) {
+    return NextResponse.redirect(loginUrl)
   }
 
   if (pathname === '/login' && user) {

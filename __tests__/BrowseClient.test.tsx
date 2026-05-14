@@ -36,19 +36,19 @@ describe('BrowseClient', () => {
     expect(screen.getAllByRole('button').length).toBeGreaterThanOrEqual(3)
   })
 
-  it('filters to only ATTRACT files when ATTRACT pill is clicked', () => {
+  it('filters to only ATTRACT files when ATTRACT is selected', () => {
     render(<BrowseClient files={mockFiles} userName="Ahmad" />)
-    fireEvent.click(screen.getByText('Buat Konten'))
+    fireEvent.change(screen.getByDisplayValue('Semua Modul'), { target: { value: 'ATTRACT' } })
     // Only 2 ATTRACT files should be visible; the CAPTURE one should not render
     const cards = screen.getAllByText('ATTRACT')
     expect(cards.length).toBe(2)
     expect(screen.queryByText('CAPTURE')).not.toBeInTheDocument()
   })
 
-  it('shows all files again when Semua pill is clicked after filter', () => {
+  it('shows all files again when Semua Modul is selected after filter', () => {
     render(<BrowseClient files={mockFiles} userName="Ahmad" />)
-    fireEvent.click(screen.getByText('Buat Konten'))
-    fireEvent.click(screen.getByText('Semua'))
+    fireEvent.change(screen.getByDisplayValue('Semua Modul'), { target: { value: 'ATTRACT' } })
+    fireEvent.change(screen.getByDisplayValue('Buat Konten'), { target: { value: 'ALL' } })
     // All 3 files should be visible — look for all 3 module badges
     const attractBadges = screen.getAllByText('ATTRACT')
     const captureBadges = screen.getAllByText('CAPTURE')

@@ -48,6 +48,7 @@ describe('OnboardingPage', () => {
   })
 
   it('redirects to /dashboard after successful niche selection', async () => {
+    global.fetch = jest.fn().mockResolvedValue({ ok: true, json: async () => ({}) })
     render(<OnboardingPage />)
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'SKINCARE' } })
     fireEvent.submit(screen.getByRole('button', { name: /teruskan/i }))
@@ -57,7 +58,10 @@ describe('OnboardingPage', () => {
   })
 
   it('shows error message when DB update fails', async () => {
-    mockCreateClient.mockReturnValue(makeSupabase({ userId: 'u1', updateError: true }) as any)
+    global.fetch = jest.fn().mockResolvedValue({
+      ok: false,
+      json: async () => ({ error: 'Ralat menyimpan maklumat. Cuba lagi.' }),
+    })
     render(<OnboardingPage />)
     fireEvent.change(screen.getByRole('combobox'), { target: { value: 'HEALTH' } })
     fireEvent.submit(screen.getByRole('button', { name: /teruskan/i }))

@@ -12,23 +12,21 @@ import { createAdminClient } from '@/lib/supabase/admin'
 const mockCreateClient = createClient as jest.MockedFunction<typeof createClient>
 const mockCreateAdminClient = createAdminClient as jest.MockedFunction<typeof createAdminClient>
 
-function makeServerClient(userId: string | null) {
+function makeServerClient(userId: string | null, email = 'user@test.com') {
   return {
     auth: {
       getUser: jest.fn().mockResolvedValue({
-        data: { user: userId ? { id: userId } : null },
+        data: { user: userId ? { id: userId, email } : null },
       }),
     },
   }
 }
 
-function makeAdminDb(opts: { updateError?: boolean } = {}) {
-  const updateMock = jest.fn().mockReturnValue({
-    eq: jest.fn().mockResolvedValue({
-      error: opts.updateError ? { message: 'column full_name does not exist' } : null,
-    }),
+function makeAdminDb(opts: { upsertError?: boolean } = {}) {
+  const upsertMock = jest.fn().mockResolvedValue({
+    error: opts.upsertError ? { message: 'upsert failed' } : null,
   })
-  return { from: jest.fn().mockReturnValue({ update: updateMock }) }
+  return { from: jest.fn().mockReturnValue({ upsert: upsertMock }), _upsertMock: upsertMock }
 }
 
 function makeRequest(body: unknown) {
@@ -48,7 +46,21 @@ describe('POST /api/profile/update', () => {
     expect(res.status).toBe(401)
   })
 
-  it('updates using column "name" (not full_name)', async () => {
+  it('upserts with id and email so users with no existing row can save', async () => {
+    mockCreateClient.mockReturnValue(makeServerClient('user-1', 'user@test.com') as any)
+    const adminDb = makeAdminDb()
+    mockCreateAdminClient.mockReturnValue(adminDb as any)
+
+    const res = await POST(makeRequest({ full_name: 'Ahmad Razif' }))
+    expect(res.status).toBe(200)
+
+    const upsertArg = adminDb._upsertMock.mock.calls[0][0]
+    expect(upsertArg).toHaveProperty('id', 'user-1')
+    expect(upsertArg).toHaveProperty('email', 'user@test.com')
+    expect(upsertArg).toHaveProperty('name', 'Ahmad Razif')
+  })
+
+  it('upserts using column "name" (not full_name)', async () => {
     mockCreateClient.mockReturnValue(makeServerClient('user-1') as any)
     const adminDb = makeAdminDb()
     mockCreateAdminClient.mockReturnValue(adminDb as any)
@@ -56,12 +68,12 @@ describe('POST /api/profile/update', () => {
     const res = await POST(makeRequest({ full_name: 'Ahmad Razif' }))
     expect(res.status).toBe(200)
 
-    const updateArg = adminDb.from('users').update.mock.calls[0][0]
-    expect(updateArg).toHaveProperty('name', 'Ahmad Razif')
-    expect(updateArg).not.toHaveProperty('full_name')
+    const upsertArg = adminDb._upsertMock.mock.calls[0][0]
+    expect(upsertArg).toHaveProperty('name', 'Ahmad Razif')
+    expect(upsertArg).not.toHaveProperty('full_name')
   })
 
-  it('updates niche correctly', async () => {
+  it('upserts niche in uppercase', async () => {
     mockCreateClient.mockReturnValue(makeServerClient('user-1') as any)
     const adminDb = makeAdminDb()
     mockCreateAdminClient.mockReturnValue(adminDb as any)
@@ -69,8 +81,8 @@ describe('POST /api/profile/update', () => {
     const res = await POST(makeRequest({ niche: 'skincare' }))
     expect(res.status).toBe(200)
 
-    const updateArg = adminDb.from('users').update.mock.calls[0][0]
-    expect(updateArg).toHaveProperty('niche', 'SKINCARE')
+    const upsertArg = adminDb._upsertMock.mock.calls[0][0]
+    expect(upsertArg).toHaveProperty('niche', 'SKINCARE')
   })
 
   it('returns 400 for invalid niche', async () => {
@@ -89,9 +101,9 @@ describe('POST /api/profile/update', () => {
     expect(body.error).toBe('nothing_to_update')
   })
 
-  it('returns 500 when database update fails', async () => {
+  it('returns 500 when database upsert fails', async () => {
     mockCreateClient.mockReturnValue(makeServerClient('user-1') as any)
-    mockCreateAdminClient.mockReturnValue(makeAdminDb({ updateError: true }) as any)
+    mockCreateAdminClient.mockReturnValue(makeAdminDb({ upsertError: true }) as any)
     const res = await POST(makeRequest({ full_name: 'Ahmad' }))
     expect(res.status).toBe(500)
     const body = await res.json()

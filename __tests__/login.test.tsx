@@ -53,7 +53,7 @@ describe('LoginPage', () => {
     expect(mockSignInWithOtp).toHaveBeenCalledWith({
       email: 'user@test.com',
       options: {
-        shouldCreateUser: false,
+        shouldCreateUser: true,
         emailRedirectTo: expect.stringContaining('/auth/callback'),
       },
     })

@@ -38,7 +38,7 @@ export async function POST(request: Request) {
       email,
       amount: parseFloat(amountStr),
       toyyibpay_ref: billCode,
-      status: 'paid',
+      status: 'success',
     })
 
   if (purchaseError) {

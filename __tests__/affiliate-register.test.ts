@@ -4,41 +4,50 @@
 import { POST } from '@/app/api/affiliate/register/route'
 
 jest.mock('@/lib/supabase/server')
+jest.mock('@/lib/supabase/admin')
+
 import { createClient } from '@/lib/supabase/server'
+import { createAdminClient } from '@/lib/supabase/admin'
+
 const mockCreateClient = createClient as jest.MockedFunction<typeof createClient>
+const mockCreateAdminClient = createAdminClient as jest.MockedFunction<typeof createAdminClient>
 
-function makeSupabase(options: {
-  userId?: string
-  email?: string
-  insertError?: boolean
-  alreadyExists?: boolean
-}) {
-  const selectSingleMock = jest.fn().mockResolvedValue({
-    data: options.alreadyExists ? { id: 'existing-id', ref_code: 'existingref' } : null,
-    error: null,
-  })
-  const eqSelectMock = jest.fn().mockReturnValue({ single: selectSingleMock })
-  const selectMock = jest.fn().mockReturnValue({ eq: eqSelectMock })
-
-  const insertMock = jest.fn().mockResolvedValue({
-    data: options.insertError ? null : [{ id: 'new-id', ref_code: 'testuser12' }],
-    error: options.insertError ? { message: 'insert failed' } : null,
-  })
-
+function makeServerClient(userId: string | null, email = 'testuser@example.com') {
   return {
     auth: {
       getUser: jest.fn().mockResolvedValue({
-        data: {
-          user: options.userId
-            ? { id: options.userId, email: options.email ?? 'test@example.com' }
-            : null,
-        },
+        data: { user: userId ? { id: userId, email } : null },
       }),
     },
-    from: jest.fn((table: string) => {
-      if (table === 'affiliates') return { select: selectMock, insert: insertMock }
-      return { select: selectMock, insert: insertMock }
-    }),
+  }
+}
+
+function makeAdminClient(options: {
+  existing?: { id: string; affiliate_code: string } | null
+  codeTaken?: boolean
+  insertError?: boolean
+} = {}) {
+  const maybeSingleExisting = jest.fn().mockResolvedValue({ data: options.existing ?? null, error: null })
+  const maybeSingleTaken = jest.fn().mockResolvedValue({
+    data: options.codeTaken ? { id: 'taken-id' } : null,
+    error: null,
+  })
+  const insertMock = jest.fn().mockResolvedValue({
+    error: options.insertError ? { code: '23506', message: 'insert failed' } : null,
+  })
+
+  let callCount = 0
+
+  return {
+    from: jest.fn(() => ({
+      select: jest.fn().mockReturnValue({
+        eq: jest.fn().mockReturnValue({
+          maybeSingle: callCount++ === 0 ? maybeSingleExisting : maybeSingleTaken,
+        }),
+      }),
+      insert: insertMock,
+    })),
+    _insertMock: insertMock,
   }
 }
 
@@ -46,26 +55,48 @@ describe('POST /api/affiliate/register', () => {
   beforeEach(() => jest.clearAllMocks())
 
   it('returns 401 when user is not authenticated', async () => {
-    mockCreateClient.mockReturnValue(makeSupabase({}) as any)
-    const res = await POST(new Request('http://localhost:3000/api/affiliate/register', { method: 'POST' }))
+    mockCreateClient.mockReturnValue(makeServerClient(null) as any)
+    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
     expect(res.status).toBe(401)
   })
 
   it('returns 409 when affiliate already exists', async () => {
-    mockCreateClient.mockReturnValue(
-      makeSupabase({ userId: 'u1', email: 'test@example.com', alreadyExists: true }) as any
+    mockCreateClient.mockReturnValue(makeServerClient('u1') as any)
+    mockCreateAdminClient.mockReturnValue(
+      makeAdminClient({ existing: { id: 'aff-1', affiliate_code: 'existingref' } }) as any
     )
-    const res = await POST(new Request('http://localhost:3000/api/affiliate/register', { method: 'POST' }))
+    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
     expect(res.status).toBe(409)
+    const body = await res.json()
+    expect(body.ref_code).toBe('existingref')
   })
 
-  it('creates affiliate record and returns 201 for authenticated user', async () => {
-    mockCreateClient.mockReturnValue(
-      makeSupabase({ userId: 'u1', email: 'testuser@example.com' }) as any
-    )
-    const res = await POST(new Request('http://localhost:3000/api/affiliate/register', { method: 'POST' }))
+  it('creates affiliate and returns 201 with ref_code', async () => {
+    mockCreateClient.mockReturnValue(makeServerClient('u1', 'testuser@example.com') as any)
+
+    // Two sequential maybySingle calls: first returns null (not existing), second returns null (code not taken)
+    const maybySingle1 = jest.fn().mockResolvedValue({ data: null, error: null })
+    const maybySingle2 = jest.fn().mockResolvedValue({ data: null, error: null })
+    const insertMock = jest.fn().mockResolvedValue({ error: null })
+    let callCount = 0
+    const adminClient = {
+      from: jest.fn(() => ({
+        select: jest.fn().mockReturnValue({
+          eq: jest.fn().mockReturnValue({
+            maybeSingle: callCount++ === 0 ? maybySingle1 : maybySingle2,
+          }),
+        }),
+        insert: insertMock,
+      })),
+    }
+    mockCreateAdminClient.mockReturnValue(adminClient as any)
+
+    const res = await POST(new Request('http://localhost/api/affiliate/register', { method: 'POST' }))
     expect(res.status).toBe(201)
     const body = await res.json()
     expect(body.ref_code).toBeDefined()
+    expect(insertMock).toHaveBeenCalledWith(
+      expect.objectContaining({ user_id: 'u1' })
+    )
   })
 })

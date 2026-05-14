@@ -2,8 +2,8 @@ import { getAllFiles, filterByModule, filterByNiche, getVaultMeta } from '@/lib/
 
 describe('vault', () => {
   describe('getAllFiles', () => {
-    it('returns all 60 vault files', () => {
-      expect(getAllFiles()).toHaveLength(60)
+    it('returns all 74 vault files', () => {
+      expect(getAllFiles()).toHaveLength(74)
     })
   })
 
@@ -15,7 +15,7 @@ describe('vault', () => {
     })
 
     it('returns all files when module is ALL', () => {
-      expect(filterByModule('ALL')).toHaveLength(60)
+      expect(filterByModule('ALL')).toHaveLength(74)
     })
 
     it('returns empty array for unknown module', () => {
@@ -37,12 +37,12 @@ describe('vault', () => {
 
   describe('getVaultMeta', () => {
     it('returns correct total', () => {
-      expect(getVaultMeta().total).toBe(60)
+      expect(getVaultMeta().total).toBe(74)
     })
 
-    it('includes all 6 modules', () => {
+    it('includes all 7 modules', () => {
       const { modules } = getVaultMeta()
-      ;['ATTRACT', 'CAPTURE', 'CONVERT', 'CLOSE', 'DEFEND', 'AD-CREATOR'].forEach(m => {
+      ;['AVATAR', 'ATTRACT', 'CAPTURE', 'CONVERT', 'CLOSE', 'DEFEND', 'AD-CREATOR'].forEach(m => {
         expect(modules).toContain(m)
       })
     })

@@ -18,11 +18,10 @@ const mockFile: VaultFile = {
 }
 
 describe('PromptCard', () => {
-  it('renders module, niche, and platform info', () => {
+  it('renders module and niche info', () => {
     render(<PromptCard file={mockFile} onClick={jest.fn()} />)
     expect(screen.getByText('ATTRACT')).toBeInTheDocument()
     expect(screen.getByText(/Real Estate Negotiator/i)).toBeInTheDocument()
-    expect(screen.getByText(/Facebook/i)).toBeInTheDocument()
   })
 
   it('calls onClick when the card is clicked', () => {

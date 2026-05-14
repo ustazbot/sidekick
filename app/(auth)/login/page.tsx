@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
+import Image from 'next/image'
 
 type Mode = 'magic-link' | 'password'
 type Status = 'idle' | 'loading' | 'success' | 'error'
@@ -22,7 +23,7 @@ export default function LoginPage() {
     const { error } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        shouldCreateUser: false,
+        shouldCreateUser: true,
         emailRedirectTo: `${window.location.origin}/auth/callback`,
       },
     })
@@ -70,8 +71,11 @@ export default function LoginPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-sm">
+        <div className="flex justify-center mb-4">
+          <Image src="/logo.png" alt="SideKick" width={140} height={56} style={{ objectFit: 'contain' }} priority />
+        </div>
         <h1 className="text-2xl font-bold text-center mb-1">Log Masuk</h1>
-        <p className="text-center text-gray-500 text-sm mb-8">SIDEKICK — AI Sales Co-Pilot</p>
+        <p className="text-center text-gray-500 text-sm mb-8">AI Sales Co-Pilot untuk Seller Malaysia</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

@@ -42,8 +42,10 @@ export async function POST(request: Request) {
   const admin = createAdminClient()
   const { error } = await admin
     .from('users')
-    .update(updates)
-    .eq('id', user.id)
+    .upsert(
+      { id: user.id, email: user.email ?? '', ...updates },
+      { onConflict: 'id' }
+    )
 
   if (error) {
     console.error('[profile/update] error:', error.message)

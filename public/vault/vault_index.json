@@ -1,10 +1,11 @@
 {
   "version": "2.0",
   "generated": "2026-05-05",
-  "total_files": 60,
+  "total_files": 74,
   "niche_count": 10,
   "module_count": 6,
   "modules": [
+    "AVATAR",
     "ATTRACT",
     "CAPTURE",
     "CONVERT",
@@ -32,6 +33,163 @@
     "WhatsApp"
   ],
   "files": [
+    {
+      "filename": "AVATAR-PERMUKAAN-v1.txt",
+      "filepath": "vault/avatar/AVATAR-PERMUKAAN-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Profil Permukaan Pelanggan",
+      "niche": "Profil Permukaan — Siapa Dia Sebenarnya",
+      "niche_code": "PERMUKAAN",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "demografi",
+        "lifestyle",
+        "rutin harian",
+        "tabiat beli"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AVATAR-DALAMAN-v1.txt",
+      "filepath": "vault/avatar/AVATAR-DALAMAN-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Dunia Dalaman & Emosi Pelanggan",
+      "niche": "Dunia Dalaman — Apa Yang Dia Rasa Tapi Tak Sebut",
+      "niche_code": "DALAMAN",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "hidden desire",
+        "internal fear",
+        "emotional tension",
+        "psikografi"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AVATAR-GESERAN-v1.txt",
+      "filepath": "vault/avatar/AVATAR-GESERAN-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Geseran Psikologi Pelanggan",
+      "niche": "Geseran Psikologi — Apa Yang Halang Dia Beli",
+      "niche_code": "GESERAN",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "psychological friction",
+        "halangan beli",
+        "trust issue",
+        "bantahan dalaman"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AVATAR-PENCETUS-v1.txt",
+      "filepath": "vault/avatar/AVATAR-PENCETUS-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Pencetus Pembelian Pelanggan",
+      "niche": "Pencetus Pembelian — Apa Yang Akhirnya Buat Dia Beli",
+      "niche_code": "PENCETUS",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "buying trigger",
+        "tipping point",
+        "social proof",
+        "keputusan beli"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AVATAR-BAHASEBENAR-v1.txt",
+      "filepath": "vault/avatar/AVATAR-BAHASEBENAR-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Bahasa Sebenar Pelanggan",
+      "niche": "Bahasa Sebenar — Kata-Kata Exact Yang Dia Guna",
+      "niche_code": "BAHASEBENAR",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "voice of customer",
+        "copywriting",
+        "frasa",
+        "slang",
+        "monolog"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AVATAR-LENGKAP-v1.txt",
+      "filepath": "vault/avatar/AVATAR-LENGKAP-v1.txt",
+      "module": "AVATAR",
+      "module_desc": "Profil Avatar Lengkap Siap Guna",
+      "niche": "Profil Lengkap — Avatar Pelanggan Siap Guna",
+      "niche_code": "LENGKAP",
+      "tier": "MVP",
+      "platforms": [
+        "ChatGPT",
+        "Claude",
+        "Gemini",
+        "DeepSeek"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "avatar",
+        "persona",
+        "profil lengkap",
+        "full avatar",
+        "customer persona",
+        "siap guna"
+      ],
+      "status": "ready"
+    },
     {
       "filename": "ATTRACT-REN-v1.txt",
       "filepath": "vault/attract/ATTRACT-REN-v1.txt",
@@ -1931,6 +2089,199 @@
         "ad-creator",
         "prompt gambar ke iklan",
         "servis rumah dan renovation"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "ATTRACT-HOOKMSL-v1.txt",
+      "filepath": "vault/attract/ATTRACT-HOOKMSL-v1.txt",
+      "module": "ATTRACT",
+      "module_desc": "Hook dari Masalah Sebenar",
+      "niche": "Hook Dari Masalah Sebenar",
+      "niche_code": "HOOKMSL",
+      "tier": "MVP",
+      "platforms": [
+        "TikTok",
+        "Instagram",
+        "Facebook"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "hook",
+        "attract",
+        "masalah sebenar",
+        "pain point",
+        "caption",
+        "tiktok",
+        "reel"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "CAPTURE-LEADMAGNET-v1.txt",
+      "filepath": "vault/capture/CAPTURE-LEADMAGNET-v1.txt",
+      "module": "CAPTURE",
+      "module_desc": "Idea Lead Magnet Organik",
+      "niche": "Lead Magnet — Idea Tarik Lead Organik",
+      "niche_code": "LEADMAGNET",
+      "tier": "MVP",
+      "platforms": [
+        "TikTok",
+        "Instagram",
+        "Facebook",
+        "WhatsApp"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "lead magnet",
+        "capture",
+        "organik",
+        "free value",
+        "lead generation"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "CONVERT-OBJECTION-v1.txt",
+      "filepath": "vault/convert/CONVERT-OBJECTION-v1.txt",
+      "module": "CONVERT",
+      "module_desc": "Pecahkan Objection Pelanggan",
+      "niche": "Pecahkan Objection — Reframe Bantahan Pelanggan",
+      "niche_code": "OBJECTION",
+      "tier": "MVP",
+      "platforms": [
+        "WhatsApp",
+        "DM"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "objection handling",
+        "bantahan",
+        "reframe",
+        "convert",
+        "closing"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "CLOSE-WASCLOSING-v1.txt",
+      "filepath": "vault/close/CLOSE-WASCLOSING-v1.txt",
+      "module": "CLOSE",
+      "module_desc": "Skrip Closing WhatsApp",
+      "niche": "Skrip Closing WhatsApp — 3 Variasi",
+      "niche_code": "WASCLOSING",
+      "tier": "MVP",
+      "platforms": [
+        "WhatsApp"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "closing",
+        "whatsapp",
+        "skrip closing",
+        "soft close",
+        "urgency close",
+        "value reframe"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "CLOSE-FOLLOWUP-v1.txt",
+      "filepath": "vault/close/CLOSE-FOLLOWUP-v1.txt",
+      "module": "CLOSE",
+      "module_desc": "Follow Up Prospek Sejuk",
+      "niche": "Follow Up Sequence — Prospek Yang Jadi Sejuk",
+      "niche_code": "FOLLOWUP",
+      "tier": "MVP",
+      "platforms": [
+        "WhatsApp",
+        "DM"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "follow up",
+        "prospek sejuk",
+        "re-engage",
+        "whatsapp sequence",
+        "ghost"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "DEFEND-PEMINAT-v1.txt",
+      "filepath": "vault/defend/DEFEND-PEMINAT-v1.txt",
+      "module": "DEFEND",
+      "module_desc": "Ubah Pembeli Jadi Brand Advocate",
+      "niche": "Ubah Pembeli Jadi Brand Advocate",
+      "niche_code": "PEMINAT",
+      "tier": "MVP",
+      "platforms": [
+        "WhatsApp",
+        "Instagram",
+        "TikTok"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "retention",
+        "brand advocate",
+        "post purchase",
+        "repeat buyer",
+        "word of mouth"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "DEFEND-COMPLAINT-v1.txt",
+      "filepath": "vault/defend/DEFEND-COMPLAINT-v1.txt",
+      "module": "DEFEND",
+      "module_desc": "Handle Complaint Dengan Bijak",
+      "niche": "Handle Complaint Dengan Bijak",
+      "niche_code": "COMPLAINT",
+      "tier": "MVP",
+      "platforms": [
+        "WhatsApp",
+        "DM",
+        "Komen"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "complaint",
+        "aduan",
+        "customer service",
+        "de-escalate",
+        "trust rebuild"
+      ],
+      "status": "ready"
+    },
+    {
+      "filename": "AD-CREATOR-TESTIMONI-v1.txt",
+      "filepath": "vault/ad-creator/AD-CREATOR-TESTIMONI-v1.txt",
+      "module": "AD-CREATOR",
+      "module_desc": "Ad Dari Testimoni Pelanggan",
+      "niche": "Ad Dari Testimoni Pelanggan",
+      "niche_code": "TESTIMONI",
+      "tier": "MVP",
+      "platforms": [
+        "TikTok",
+        "Facebook",
+        "Instagram"
+      ],
+      "language": "Dwibahasa",
+      "version": "v1",
+      "tags": [
+        "ad",
+        "testimoni",
+        "ugc",
+        "tiktok script",
+        "facebook caption",
+        "story ad"
       ],
       "status": "ready"
     }

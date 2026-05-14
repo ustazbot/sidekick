@@ -1,7 +1,12 @@
+import Image from 'next/image'
+
 export default function PaymentSuccessPage() {
   return (
     <main className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
       <div className="w-full max-w-sm text-center">
+        <div className="flex justify-center mb-4">
+          <Image src="/logo.png" alt="SideKick" width={140} height={56} style={{ objectFit: 'contain' }} priority />
+        </div>
         <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg
             aria-hidden="true"

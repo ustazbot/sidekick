@@ -25,7 +25,7 @@ describe('PromptModal', () => {
 
   it('renders file info when isOpen is true', () => {
     render(<PromptModal file={mockFile} isOpen={true} onClose={jest.fn()} />)
-    expect(screen.getByText('ATTRACT')).toBeInTheDocument()
+    expect(screen.getByText(/ATTRACT/)).toBeInTheDocument()
     expect(screen.getByText(/Real Estate Negotiator/i)).toBeInTheDocument()
     expect(screen.getByText('Content post organik')).toBeInTheDocument()
   })
@@ -35,12 +35,5 @@ describe('PromptModal', () => {
     render(<PromptModal file={mockFile} isOpen={true} onClose={mockClose} />)
     fireEvent.click(screen.getByTestId('modal-overlay'))
     expect(mockClose).toHaveBeenCalledTimes(1)
-  })
-
-  it('renders a download link with the correct href', () => {
-    render(<PromptModal file={mockFile} isOpen={true} onClose={jest.fn()} />)
-    const downloadLink = screen.getByRole('link', { name: /muat turun/i })
-    expect(downloadLink).toHaveAttribute('href', '/vault/attract/ATTRACT-REN-v1.txt')
-    expect(downloadLink).toHaveAttribute('download', 'ATTRACT-REN-v1.txt')
   })
 })

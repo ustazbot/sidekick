@@ -29,7 +29,7 @@ export default function LoginPage() {
     })
     if (error) {
       setStatus('error')
-      setMessage('Ralat menghantar magic link. Pastikan email anda betul.')
+      setMessage(`Ralat: ${error.message}`)
       return
     }
     setStatus('success')

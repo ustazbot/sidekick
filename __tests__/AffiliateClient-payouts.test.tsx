@@ -94,3 +94,30 @@ describe('AffiliateClient — sejarah bayaran', () => {
     expect(screen.getAllByText('—').length).toBeGreaterThan(0)
   })
 })
+
+describe('AffiliateClient — statistik', () => {
+  it('menunjukkan nilai sebenar apabila stats dihantar', () => {
+    render(
+      <AffiliateClient
+        affiliate={mockAffiliate}
+        refUrl="https://sidekick.my/ref/testref123"
+        stats={{ clicks: 42, sales: 7, commission: 266 }}
+      />
+    )
+    expect(screen.getByText('42')).toBeInTheDocument()
+    expect(screen.getByText('7')).toBeInTheDocument()
+    expect(screen.getByText('RM266.00')).toBeInTheDocument()
+  })
+
+  it('menunjukkan "—" untuk semua stat apabila stats tidak dihantar', () => {
+    render(
+      <AffiliateClient
+        affiliate={mockAffiliate}
+        refUrl="https://sidekick.my/ref/testref123"
+      />
+    )
+    // Klik and Sales both show —, Komisyen shows RM—
+    expect(screen.getAllByText('—').length).toBeGreaterThanOrEqual(2)
+    expect(screen.getByText('RM—')).toBeInTheDocument()
+  })
+})

@@ -5,6 +5,9 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import type { VaultIndex } from '@/types'
 
+// Vault bucket name in Supabase Storage
+const VAULT_BUCKET = 'vault'
+
 // Only allow vault filenames: e.g. ATTRACT-REN-v1.txt or AD-CREATOR-FNB-v1.txt
 const SAFE_FILENAME = /^[A-Z0-9]+-[A-Z0-9-]+-v\d+\.txt$/i
 
@@ -67,13 +70,18 @@ export async function GET(request: Request) {
     return NextResponse.json({ error: 'file_not_found' }, { status: 404 })
   }
 
-  // 5. Read the file — entry.filepath is relative to project root e.g. "vault/attract/ATTRACT-REN-v1.txt"
-  let content: string
-  try {
-    content = await fs.readFile(path.join(process.cwd(), entry.filepath), 'utf-8')
-  } catch {
+  // 5. Fetch file from Supabase Storage
+  // entry.filepath = "vault/attract/ATTRACT-REN-v1.txt" but bucket stores "attract/ATTRACT-REN-v1.txt"
+  const storagePath = entry.filepath.replace(/^vault\//, '')
+  const { data: blob, error: storageError } = await admin.storage
+    .from(VAULT_BUCKET)
+    .download(storagePath)
+
+  if (storageError || !blob) {
     return NextResponse.json({ error: 'file_read_error' }, { status: 500 })
   }
+
+  const content = await blob.text()
 
   // 6. Log download (non-blocking — failure does not abort the download)
   admin

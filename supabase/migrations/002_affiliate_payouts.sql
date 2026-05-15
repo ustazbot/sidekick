@@ -17,6 +17,9 @@ create index affiliate_payouts_affiliate_id_idx
 
 alter table public.affiliate_payouts enable row level security;
 
+grant select on public.affiliate_payouts to authenticated;
+grant select, insert, update, delete on public.affiliate_payouts to service_role;
+
 -- Affiliate hanya boleh baca rekod payout mereka sendiri
 create policy "payouts_via_affiliate" on public.affiliate_payouts
   for select using (

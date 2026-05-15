@@ -12,14 +12,21 @@ type PayoutRecord = {
   paid_at: string
 }
 
+type Stats = {
+  clicks: number
+  sales: number
+  commission: number
+}
+
 type Props = {
   affiliate: AffiliateData
   refUrl: string | null
   appUrl?: string
   payouts?: PayoutRecord[]
+  stats?: Stats
 }
 
-export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://sidekick101.com', payouts = [] }: Props) {
+export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://sidekick101.com', payouts = [], stats }: Props) {
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const [registeredRef, setRegisteredRef] = useState<string | null>(null)
@@ -94,7 +101,11 @@ export default function AffiliateClient({ affiliate, refUrl, appUrl = 'https://s
               Statistik
             </p>
             <div className="grid grid-cols-3 gap-2 text-center">
-              {[{ label: 'Klik', value: '—' }, { label: 'Sales', value: '—' }, { label: 'Komisyen', value: 'RM—' }].map((stat) => (
+              {[
+                { label: 'Klik',     value: stats ? String(stats.clicks) : '—' },
+                { label: 'Sales',    value: stats ? String(stats.sales) : '—' },
+                { label: 'Komisyen', value: stats ? `RM${stats.commission.toFixed(2)}` : 'RM—' },
+              ].map((stat) => (
                 <div key={stat.label} className="rounded-xl py-3" style={{ background: 'var(--accent-light)', border: '1px solid var(--accent-border)' }}>
                   <p className="font-syne font-bold text-base" style={{ color: 'var(--accent)' }}>{stat.value}</p>
                   <p className="text-[10px]" style={{ color: 'var(--text-3)' }}>{stat.label}</p>

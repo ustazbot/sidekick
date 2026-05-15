@@ -23,7 +23,7 @@ export async function POST(request: Request) {
 
   const secretKey    = process.env.TOYYIBPAY_USER_SECRET_KEY ?? ''
   const categoryCode = process.env.TOYYIBPAY_CATEGORY_CODE  ?? ''
-  const appUrl       = process.env.NEXT_PUBLIC_APP_URL       ?? 'http://localhost:3000'
+  const appUrl       = process.env.NEXT_PUBLIC_APP_URL       ?? 'https://sidekick101.com'
 
   if (!secretKey || !categoryCode) {
     console.error('[payment/create] ToyyibPay env vars missing')

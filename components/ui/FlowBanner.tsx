@@ -29,7 +29,7 @@ export default function FlowBanner() {
     <div
       className="relative rounded-[18px] mb-[18px] overflow-hidden"
       style={{
-        background: 'linear-gradient(145deg, rgba(20,24,32,0.5) 0%, rgba(26,31,44,0.5) 100%)',
+        background: 'linear-gradient(145deg, #141820 0%, #1A1F2C 100%)',
         border: '1px solid rgba(245,193,0,0.13)',
         boxShadow: '0 4px 24px rgba(0,0,0,0.22), inset 0 1px 0 rgba(255,255,255,0.04)',
       }}

@@ -49,7 +49,7 @@ export default async function DashboardLayout({
       <header
         className="md:hidden sticky top-0 z-50 px-[18px] py-[13px] flex items-center justify-center relative"
         style={{
-          background:          'rgba(250,249,246,0.90)',
+          background:          'rgba(250,249,246,0.50)',
           backdropFilter:      'blur(24px)',
           WebkitBackdropFilter:'blur(24px)',
           borderBottom:        '1px solid rgba(0,0,0,0.06)',

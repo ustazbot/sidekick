@@ -15,6 +15,7 @@ const mockRefresh = jest.fn()
 
 jest.mock('next/navigation', () => ({
   useRouter: () => ({ push: mockPush, refresh: mockRefresh }),
+  useSearchParams: () => new URLSearchParams(),
 }))
 
 describe('LoginPage', () => {

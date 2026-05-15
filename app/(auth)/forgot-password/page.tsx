@@ -17,9 +17,10 @@ export default function ForgotPasswordPage() {
     e.preventDefault()
     setStatus('loading')
 
-    await supabase.auth.resetPasswordForEmail(email, {
+    const { error } = await supabase.auth.resetPasswordForEmail(email, {
       redirectTo: `${appUrl}/reset-password`,
     })
+    if (error) console.error('[forgot-password]', error.message)
 
     // Sentiasa papar "sent" tanpa mengira email wujud atau tidak (security)
     setStatus('sent')

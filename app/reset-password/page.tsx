@@ -58,7 +58,12 @@ function ResetPasswordForm() {
   }
 
   if (stage === 'loading') {
-    return <p className="text-center text-sm text-gray-500">Mengesahkan link...</p>
+    return (
+      <div className="text-center space-y-3">
+        <p className="text-sm text-gray-500">Mengesahkan link...</p>
+        <a href="/login" className="text-xs text-gray-400 underline">Kembali ke Log Masuk</a>
+      </div>
+    )
   }
 
   return (
@@ -68,6 +73,7 @@ function ResetPasswordForm() {
         <input
           id="password"
           type="password"
+          minLength={8}
           value={password}
           onChange={e => setPassword(e.target.value)}
           required
@@ -80,6 +86,7 @@ function ResetPasswordForm() {
         <input
           id="confirm"
           type="password"
+          minLength={8}
           value={confirm}
           onChange={e => setConfirm(e.target.value)}
           required

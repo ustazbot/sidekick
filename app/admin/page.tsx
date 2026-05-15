@@ -30,10 +30,38 @@ async function getStats() {
       .order('created_at', { ascending: false })
       .limit(15),
     db.from('downloads')
-      .select('id, user_id, filename, downloaded_at')
-      .order('downloaded_at', { ascending: false })
-      .limit(15),
+      .select('filename')
+      .limit(500),
   ])
+
+  // ── Download stats ─────────────────────────────────────────
+  const KNOWN_MODULES = ['AD-CREATOR', 'AVATAR', 'ATTRACT', 'CAPTURE', 'CONVERT', 'CLOSE', 'DEFEND']
+  function parseFilename(filename: string) {
+    const name = (filename ?? '').replace(/-v\d+\.txt$/i, '')
+    for (const mod of KNOWN_MODULES) {
+      if (name.startsWith(mod + '-')) {
+        return { module: mod, niche: name.slice(mod.length + 1) }
+      }
+    }
+    return { module: '—', niche: '—' }
+  }
+
+  const fileCounts   = new Map<string, number>()
+  const moduleCounts = new Map<string, number>()
+  const nicheCounts  = new Map<string, number>()
+
+  for (const d of (downloads ?? []) as { filename?: string }[]) {
+    const fn = d.filename ?? ''
+    if (!fn) continue
+    fileCounts.set(fn, (fileCounts.get(fn) ?? 0) + 1)
+    const { module, niche } = parseFilename(fn)
+    if (module !== '—') moduleCounts.set(module, (moduleCounts.get(module) ?? 0) + 1)
+    if (niche  !== '—') nicheCounts.set(niche,   (nicheCounts.get(niche)   ?? 0) + 1)
+  }
+
+  const dlTopFiles    = [...fileCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 5)
+  const dlModuleStats = [...moduleCounts.entries()].sort((a, b) => b[1] - a[1])
+  const dlNicheStats  = [...nicheCounts.entries()].sort((a, b) => b[1] - a[1])
 
   // Fetch all users separately for reliable error surfacing
   const { data: usersRaw, error: usersErr } = await db
@@ -107,13 +135,15 @@ async function getStats() {
   })
 
   return {
-    totalUsers:      totalUsers     ?? 0,
-    totalPaid:       totalPaid      ?? 0,
-    totalDownloads:  totalDownloads ?? 0,
+    totalUsers:      totalUsers      ?? 0,
+    totalPaid:       totalPaid       ?? 0,
+    totalDownloads:  totalDownloads  ?? 0,
     totalAffiliates: totalAffiliates ?? 0,
     totalRevenue,
     purchases: purchases ?? [],
-    downloads:  downloads ?? [],
+    dlTopFiles,
+    dlModuleStats,
+    dlNicheStats,
     users,
     affiliates,
   }
@@ -246,44 +276,93 @@ export default async function AdminPage() {
           )}
         </div>
 
-        {/* Recent Downloads */}
+        {/* Download — Statistik */}
         <div className="ad-card" style={{ overflow: 'hidden' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 14 }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 16 }}>
             <h2 style={{ fontFamily: 'inherit', fontSize: 13, fontWeight: 800, color: '#0F1923' }}>
-              Download Terkini
+              Download — Statistik
             </h2>
-            <span style={{ fontSize: 11, color: '#9CA3AF' }}>{stats.downloads.length} rekod</span>
+            <span style={{ fontSize: 11, color: '#9CA3AF' }}>{stats.totalDownloads} jumlah</span>
           </div>
 
-          {stats.downloads.length === 0 ? (
+          {stats.dlTopFiles.length === 0 ? (
             <p style={{ fontSize: 13, color: '#9CA3AF', textAlign: 'center', padding: '20px 0' }}>Tiada download lagi</p>
           ) : (
-            <table className="ad-table">
-              <thead>
-                <tr>
-                  <th>Fail</th>
-                  <th>User ID</th>
-                  <th>Tarikh</th>
-                </tr>
-              </thead>
-              <tbody>
-                {stats.downloads.map((d: {
-                  id: string; filename?: string; user_id?: string; downloaded_at?: string
-                }) => (
-                  <tr key={d.id}>
-                    <td style={{ fontFamily: 'monospace', fontSize: 11, color: '#374151' }}>
-                      {d.filename ?? '—'}
-                    </td>
-                    <td style={{ fontFamily: 'monospace', fontSize: 10, color: '#9CA3AF' }}>
-                      {d.user_id ? d.user_id.slice(0, 8) + '…' : '—'}
-                    </td>
-                    <td style={{ color: '#9CA3AF', whiteSpace: 'nowrap' }}>
-                      {fmtDate(d.downloaded_at ?? null)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            <>
+              {/* Top 5 files */}
+              <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.8px', textTransform: 'uppercase', color: '#9CA3AF', marginBottom: 10 }}>
+                Top 5 Fail
+              </p>
+              <div style={{ marginBottom: 20 }}>
+                {stats.dlTopFiles.map(([filename, count], i) => {
+                  const maxCount = stats.dlTopFiles[0][1]
+                  const pct = (count / maxCount) * 100
+                  return (
+                    <div key={filename} style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 9 }}>
+                      <span style={{ fontSize: 10, color: '#D1D5DB', width: 12, textAlign: 'right', flexShrink: 0 }}>
+                        {i + 1}
+                      </span>
+                      <div style={{ flex: 1 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 3 }}>
+                          <span style={{ fontSize: 10, fontFamily: 'monospace', color: '#374151' }}>
+                            {filename.replace(/-v\d+\.txt$/i, '')}
+                          </span>
+                          <span style={{ fontSize: 10, fontWeight: 700, color: '#1D9E75' }}>{count}</span>
+                        </div>
+                        <div style={{ height: 4, background: '#F3F4F6', borderRadius: 2 }}>
+                          <div style={{ width: `${pct}%`, height: '100%', background: '#1D9E75', borderRadius: 2 }} />
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+
+              {/* Module + Niche breakdown */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 20 }}>
+                <div>
+                  <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.8px', textTransform: 'uppercase', color: '#9CA3AF', marginBottom: 10 }}>
+                    Ikut Modul
+                  </p>
+                  {stats.dlModuleStats.map(([mod, count]) => {
+                    const maxCount = stats.dlModuleStats[0]?.[1] ?? 1
+                    const pct = (count / maxCount) * 100
+                    return (
+                      <div key={mod} style={{ marginBottom: 8 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
+                          <span style={{ fontSize: 10, color: '#374151', fontWeight: 500 }}>{mod}</span>
+                          <span style={{ fontSize: 10, color: '#6B7280' }}>{count}</span>
+                        </div>
+                        <div style={{ height: 3, background: '#F3F4F6', borderRadius: 2 }}>
+                          <div style={{ width: `${pct}%`, height: '100%', background: '#3B82F6', borderRadius: 2 }} />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+
+                <div>
+                  <p style={{ fontSize: 10, fontWeight: 700, letterSpacing: '0.8px', textTransform: 'uppercase', color: '#9CA3AF', marginBottom: 10 }}>
+                    Ikut Niche
+                  </p>
+                  {stats.dlNicheStats.map(([niche, count]) => {
+                    const maxCount = stats.dlNicheStats[0]?.[1] ?? 1
+                    const pct = (count / maxCount) * 100
+                    return (
+                      <div key={niche} style={{ marginBottom: 8 }}>
+                        <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 2 }}>
+                          <span style={{ fontSize: 10, color: '#374151', fontWeight: 500 }}>{niche}</span>
+                          <span style={{ fontSize: 10, color: '#6B7280' }}>{count}</span>
+                        </div>
+                        <div style={{ height: 3, background: '#F3F4F6', borderRadius: 2 }}>
+                          <div style={{ width: `${pct}%`, height: '100%', background: '#8B5CF6', borderRadius: 2 }} />
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            </>
           )}
         </div>
 

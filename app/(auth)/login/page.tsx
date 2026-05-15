@@ -1,20 +1,24 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { createClient } from '@/lib/supabase/client'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Image from 'next/image'
 
 type Status = 'idle' | 'loading' | 'error'
 
-export default function LoginPage() {
+function LoginForm() {
   const [email,    setEmail]    = useState('')
   const [password, setPassword] = useState('')
   const [status,   setStatus]   = useState<Status>('idle')
   const [message,  setMessage]  = useState('')
 
-  const router = useRouter()
-  const supabase = useMemo(() => createClient(), [])
+  const router       = useRouter()
+  const searchParams = useSearchParams()
+  const supabase     = useMemo(() => createClient(), [])
+
+  const resetSuccess = searchParams.get('reset') === 'success'
+  const invalidReset = searchParams.get('error') === 'invalid_reset'
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
@@ -42,6 +46,17 @@ export default function LoginPage() {
         <h1 className="text-2xl font-bold text-center mb-1">Log Masuk</h1>
         <p className="text-center text-gray-500 text-sm mb-8">AI Sales Co-Pilot untuk Seller Malaysia</p>
 
+        {resetSuccess && (
+          <p className="mb-4 text-sm text-green-700 bg-green-50 border border-green-200 rounded-lg px-3 py-2 text-center">
+            Kata laluan berjaya ditukar. Sila log masuk.
+          </p>
+        )}
+        {invalidReset && (
+          <p className="mb-4 text-sm text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2 text-center">
+            Link telah tamat tempoh. Sila minta semula.
+          </p>
+        )}
+
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
@@ -67,6 +82,11 @@ export default function LoginPage() {
               placeholder="••••••••"
               className="w-full border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-black"
             />
+            <div className="flex justify-end mt-1">
+              <a href="/forgot-password" className="text-xs text-gray-500 hover:text-gray-700 underline">
+                Lupa kata laluan?
+              </a>
+            </div>
           </div>
 
           {status === 'error' && (
@@ -89,5 +109,13 @@ export default function LoginPage() {
         </p>
       </div>
     </main>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense>
+      <LoginForm />
+    </Suspense>
   )
 }

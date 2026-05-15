@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
 function VaultIcon({ active }: { active: boolean }) {
-  const c = active ? '#0C1117' : '#5A5A6E'
+  const c = active ? '#0C1117' : '#A0A0B4'
   return (
     <svg viewBox="0 0 20 20" width="19" height="19" fill="none" aria-hidden="true">
       <rect x="2"    y="2"    width="6.5" height="6.5" rx="1.8" fill={c} />
@@ -16,7 +16,7 @@ function VaultIcon({ active }: { active: boolean }) {
 }
 
 function SearchIcon({ active }: { active: boolean }) {
-  const c = active ? '#0C1117' : '#5A5A6E'
+  const c = active ? '#0C1117' : '#A0A0B4'
   return (
     <svg viewBox="0 0 20 20" width="19" height="19" fill="none" stroke={c} strokeWidth="1.9" strokeLinecap="round" aria-hidden="true">
       <circle cx="8.5" cy="8.5" r="5" />
@@ -26,7 +26,7 @@ function SearchIcon({ active }: { active: boolean }) {
 }
 
 function AffiliateIcon({ active }: { active: boolean }) {
-  const c = active ? '#0C1117' : '#5A5A6E'
+  const c = active ? '#0C1117' : '#A0A0B4'
   return (
     <svg viewBox="0 0 20 20" width="19" height="19" fill="none" stroke={c} strokeWidth="1.9" strokeLinecap="round" aria-hidden="true">
       <circle cx="4.5"  cy="10"   r="2.5" />
@@ -38,7 +38,7 @@ function AffiliateIcon({ active }: { active: boolean }) {
 }
 
 function ProfileIcon({ active }: { active: boolean }) {
-  const c = active ? '#0C1117' : '#5A5A6E'
+  const c = active ? '#0C1117' : '#A0A0B4'
   return (
     <svg viewBox="0 0 20 20" width="19" height="19" fill="none" stroke={c} strokeWidth="1.9" strokeLinecap="round" aria-hidden="true">
       <circle cx="10" cy="6.5" r="3" />
@@ -105,7 +105,7 @@ export default function BottomNav() {
                 style={{
                   fontSize: 10,
                   fontWeight: active ? 600 : 400,
-                  color: active ? '#F5C100' : '#5A5A6E',
+                  color: active ? '#F5C100' : '#A0A0B4',
                   letterSpacing: '0.15px',
                   transition: 'color 0.18s ease',
                 }}

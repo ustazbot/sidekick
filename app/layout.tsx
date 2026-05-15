@@ -12,6 +12,9 @@ const jakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: 'SIDEKICK — AI Sales Co-Pilot',
   description: 'Koleksi prompt AI berstruktur untuk seller Malaysia. Jual lebih berkesan di media sosial.',
+  icons: {
+    icon: [{ url: '/favicon.svg', type: 'image/svg+xml' }],
+  },
 }
 
 export default function RootLayout({
